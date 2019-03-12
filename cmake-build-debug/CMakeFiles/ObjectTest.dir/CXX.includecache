@@ -1,0 +1,32 @@
+#IncludeRegexLine: ^[ 	]*[#%][ 	]*(include|import)[ 	]*[<"]([^">]+)([">])
+
+#IncludeRegexScan: ^.*$
+
+#IncludeRegexComplain: ^$
+
+#IncludeRegexTransform: 
+
+D:/learn/computer-graphic/StarAnim/Object.cpp
+cstring
+-
+assert.h
+-
+iostream
+-
+Object.h
+D:/learn/computer-graphic/StarAnim/Object.h
+
+D:/learn/computer-graphic/StarAnim/Object.h
+vector
+-
+Transform.h
+D:/learn/computer-graphic/StarAnim/Transform.h
+
+D:/learn/computer-graphic/StarAnim/Transform.h
+glm/glm.hpp
+-
+glm/gtc/matrix_transform.hpp
+-
+glm/gtc/type_ptr.hpp
+-
+

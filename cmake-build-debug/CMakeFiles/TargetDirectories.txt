@@ -1,0 +1,3 @@
+D:/learn/computer-graphic/StarAnim/cmake-build-debug/CMakeFiles/rebuild_cache.dir
+D:/learn/computer-graphic/StarAnim/cmake-build-debug/CMakeFiles/Test.dir
+D:/learn/computer-graphic/StarAnim/cmake-build-debug/CMakeFiles/edit_cache.dir
