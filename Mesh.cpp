@@ -4,10 +4,11 @@
 
 #include "Mesh.h"
 
-Mesh::Mesh(Vector<Vertex> vertices, Vector<Index> indices, Vector<Texture> textures) {
+Mesh::Mesh(Vector<Vertex> vertices, Vector<Index> indices, Vector<Texture> textures,Material material) {
     _vertices=vertices;
     _indices=indices;
     _textures=textures;
+    _material=material;
     setupMesh();
 }
 
@@ -42,8 +43,8 @@ void Mesh::setupMesh() {
 }
 
 void Mesh::draw(Shader shader) const {
-    Index diffuseNum=1;
-    Index specularNum=1;
+    Index diffuseNum=0;
+    Index specularNum=0;
     Index normalNum=1;
     Index heightNum=1;
 
@@ -53,18 +54,23 @@ void Mesh::draw(Shader shader) const {
         String num;
         String name=_textures[i].type;
         if(name=="texture_diffuse")
-            num=std::to_string(diffuseNum++);
+            num="["+std::to_string(diffuseNum++)+"]";
         else if(name=="texture_specular")
-            num=std::to_string(specularNum++);
+            num="["+std::to_string(specularNum++)+"]";
         else if(name=="texture_normal")
-            num=std::to_string(normalNum++);
+            num="["+std::to_string(normalNum++)+"]";
         else if(name=="texture_height")
-            num=std::to_string(heightNum++);
+            num="["+std::to_string(heightNum++)+"]";
 
         glUniform1i(glGetUniformLocation(shader.ProgramID,(name+num).c_str()),i);
         glBindTexture(GL_TEXTURE_2D,_textures[i].id);
     }
-
+    //std::cout<<"specular:"<<specularNum<<std::endl;
+    shader.setInt(diffuseNum,"textureDiffuseSize");
+    shader.setInt(specularNum,"textureSpecularSize");
+    shader.setVec3(Vec3(_material.ambient),"material.ambient");
+    shader.setVec3(Vec3(_material.diffuse),"material.diffuse");
+    shader.setVec3(Vec3(_material.specular),"material.specular");
     glBindVertexArray(_VAO);
     glDrawElements(GL_TRIANGLES,_indices.size(),GL_UNSIGNED_INT,0);
     glBindVertexArray(0);

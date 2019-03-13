@@ -100,11 +100,24 @@ Mesh Model::processMesh(aiMesh *mesh, const aiScene *scene) {
     Vector<Texture> heightMap=loadMaterialTextures(material,aiTextureType_HEIGHT,"texture_height");
     textures.insert(textures.end(),heightMap.begin(),heightMap.end());
 
-    return Mesh(vertices,indices,textures);
+
+    Material mat;
+    aiColor3D color;
+    material->Get(AI_MATKEY_COLOR_AMBIENT,color);
+    mat.ambient=Vec4(color.r,color.g,color.b,1.0);
+    material->Get(AI_MATKEY_COLOR_DIFFUSE,color);
+    mat.diffuse=Vec4(color.r,color.g,color.b,1.0);
+    material->Get(AI_MATKEY_COLOR_SPECULAR,color);
+    mat.specular=Vec4(color.r,color.g,color.b,1.0);
+
+    return Mesh(vertices,indices,textures,mat);
 }
 
 Vector<Texture> Model::loadMaterialTextures(aiMaterial *mat, aiTextureType type, const String &typeName) {
     Vector<Texture> textures;
+
+//    if(type==aiTextureType_DIFFUSE)
+//        std::cout<<"diffuse:"<<mat->GetTextureCount(type)<<std::endl;
     for(Index i=0;i<mat->GetTextureCount(type);++i){
         aiString str;
         mat->GetTexture(type,i,&str);

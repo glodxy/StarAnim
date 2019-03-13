@@ -93,10 +93,10 @@ void initShader(){
     ls=new Shader("Vertex","light");
     shader=new Shader("Vertex","test_fragment");
     camera=Camera(glm::vec3(0.0f,0.0f,3.0f));
-    obj=new Model("E:/project/Test/inory/inory.pmx");
+    //obj=new Model("E:/project/Test/inory/inory.pmx");
     obj1=new Model("E:/project/Test/IA/IAx/IAx.pmx");
     //obj=new Model("e:/project/Test/TDA Ice Cold Append Miku/TDA Ice Cold Append Miku.pmx");
-    //obj=new Model("e:/project/Test/Tda China Dress Stardust Canary/Tda China Dress Stardust Canary.pmx");
+    obj=new Model("e:/project/Test/Tda China Dress Stardust Canary/Tda China Dress Stardust Canary.pmx");
     obj->setPosition(0.0f,-10.0f,0.0f);
     obj->scaleTo(0.2f,0.2f,0.2f);
     obj1->setPosition(20.0f,-10.0f,0.0f);
@@ -115,11 +115,13 @@ void initShader(){
 
     dirLight=new DirLight(Vec3(-1.0f,-1.0f,-1.0f),Vec3(0.05f,0.05f,0.05f),Vec3(0.4f,0.4f,0.4f),Vec3(0.5f,0.5f,0.5f));
 
-    lightManager->addLight(SPOT_LIGHT,spotLight);
+    //lightManager->addLight(SPOT_LIGHT,spotLight);
     lightManager->addLight(POINT_LIGHT,&light);
     lightManager->addLight(DIR_LIGHT,dirLight);
     lightManager->bindShader(shader);
     glEnable(GL_DEPTH_TEST);
+    glEnable(GL_BLEND);
+    glBlendFunc(GL_SRC_ALPHA, GL_ONE_MINUS_SRC_ALPHA);
 }
 
 void display(){
@@ -130,10 +132,7 @@ void display(){
     shader->setMat4(camera.getProjectionMatrix(),"projection");
     shader->setMat4(camera.getViewMatrix(),"view");
 
-    shader->setVec3(Vec3(0.24725f,0.1995f,0.0745f),"material.ambient");
-    shader->setVec3(Vec3(0.75164f,0.60648f,0.22648f),"material.diffuse");
-    shader->setVec3(Vec3(0.628281f,0.555802f,0.366065f),"material.specular");
-    shader->setFloat(0.6f,"material.shininess");
+    shader->setFloat(32.0f,"material.shininess");
 
     shader->setMat4(obj->getModelMatrix(),"model");
     shader->setVec3(camera.position(),"viewPos");

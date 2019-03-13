@@ -40,14 +40,21 @@ typedef struct{
     String path;
 }Texture;
 
+typedef struct{
+    Vec4 ambient;
+    Vec4 diffuse;
+    Vec4 specular;
+}Material;
+
 class Mesh {
 public:
     Vector<Vertex> _vertices;
     Vector<Index> _indices;
     Vector<Texture> _textures;
+    Material _material;
     ID _VAO;
 
-    Mesh(Vector<Vertex> vertices,Vector<Index> indices,Vector<Texture> textures);
+    Mesh(Vector<Vertex> vertices,Vector<Index> indices,Vector<Texture> textures,Material material);
 
     void draw(Shader shader)const;
 protected:
