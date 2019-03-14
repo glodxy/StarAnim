@@ -29,6 +29,7 @@ bool firstMouse=true;
 bool keys[1024];
 bool clicked=false;
 Model *obj,*obj1;
+Model *scene0,*scene1,*scene2;
 //static ShaderInfo si{
 //        "vertex",
 //        "test_fragment"
@@ -93,13 +94,18 @@ void initShader(){
     ls=new Shader("Vertex","light");
     shader=new Shader("Vertex","test_fragment");
     camera=Camera(glm::vec3(0.0f,0.0f,3.0f));
+
+    scene0=new Model("e:/project/Test/scene/rainbow.x");
+    scene1=new Model("e:/project/Test/scene/bg.x");
+    scene2=new Model("e:/project/Test/scene/bg2.x");
+
     //obj=new Model("E:/project/Test/inory/inory.pmx");
     //obj1=new Model("E:/project/Test/IA/IAx/IAx.pmx");
     obj1=new Model("e:/project/Test/TDA Ice Cold Append Miku/TDA Ice Cold Append Miku.pmx");
     obj=new Model("e:/project/Test/Tda China Dress Stardust Canary/Tda China Dress Stardust Canary.pmx");
     obj->setPosition(0.0f,0.0f,0.0f);
     obj->scaleTo(0.2f,0.2f,0.2f);
-    obj1->setPosition(10.0f,0.0f,0.0f);
+    obj1->setPosition(10.0f,5.0f,0.0f);
     obj1->scaleTo(0.1f,0.1f,0.1f);
     InitLight();
     light=new PointLight(1.0,0.045,0.0075);
@@ -134,6 +140,10 @@ void display(){
     shader->setMat4(camera.getViewMatrix(),"view");
     shader->setVec3(camera.position(),"viewPos");
     lightManager->use();
+
+    //scene0->draw(*shader);
+    //scene1->draw(*shader);
+    //scene2->draw(*shader);
 
     shader->setMat4(obj->getModelMatrix(),"model");
     obj->draw(*shader);
