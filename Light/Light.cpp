@@ -4,7 +4,7 @@
 
 #include "Light.h"
 
-Light::Light():_ambient(1.0f,1.0f,1.0f),_diffuse(1.0f,1.0f,1.0f),_specular(.0f,1.0f,1.0f),_type(IDLE_LIGHT){
+Light::Light():_ambient(1.0f,1.0f,1.0f),_diffuse(1.0f,1.0f,1.0f),_specular(1.0f,1.0f,1.0f),_type(IDLE_LIGHT){
 }
 
 Light::Light(const Vec3 &ambient, const Vec3 &diffuse, const Vec3 &specular):Light(){

@@ -71,6 +71,7 @@ void Mesh::draw(Shader shader) const {
     shader.setVec3(Vec3(_material.ambient),"material.ambient");
     shader.setVec3(Vec3(_material.diffuse),"material.diffuse");
     shader.setVec3(Vec3(_material.specular),"material.specular");
+    shader.setFloat(_material.shininess,"material.shininess");
     glBindVertexArray(_VAO);
     glDrawElements(GL_TRIANGLES,_indices.size(),GL_UNSIGNED_INT,0);
     glBindVertexArray(0);

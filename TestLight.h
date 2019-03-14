@@ -11,7 +11,7 @@
 Shader* ls;
 unsigned int _LIGHT;
 Vec3 lightColor(1.0f,1.0f,1.0f);
-Vec3 lightPos(-1.0f,0.0f,0.0f);
+Vec3 lightPos(5.0f,3.0f,0.0f);
 float vertices[] = {
         -0.5f, -0.5f, -0.5f,  0.0f,  0.0f, -1.0f,
         0.5f, -0.5f, -0.5f,  0.0f,  0.0f, -1.0f,

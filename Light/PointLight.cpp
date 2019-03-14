@@ -20,8 +20,13 @@ void PointLight::setPosition(float x, float y, float z) {
     _position.z=z;
 }
 
+void PointLight::setLightStrenth(float constant, float linear, float quadratic) {
+    _constant=constant;
+    _linear=linear;
+    _quadratic=quadratic;
+}
+
 void PointLight::use() {
-    _shader->setFloat(0,_name+".flag");
     _shader->setVec3(_ambient,_name+".ambient");
     _shader->setVec3(_diffuse,_name+".diffuse");
     _shader->setVec3(_specular,_name+".specular");

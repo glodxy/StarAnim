@@ -6,6 +6,7 @@
 
 Model::Model(const String &filePath) {
     loadModel(filePath);
+    _scale=Vec3(1.0,1.0,1.0);
     _position=Vec3(0,0,0);
     _rotation=Quat(1,0,0,0);
 }
@@ -109,6 +110,9 @@ Mesh Model::processMesh(aiMesh *mesh, const aiScene *scene) {
     mat.diffuse=Vec4(color.r,color.g,color.b,1.0);
     material->Get(AI_MATKEY_COLOR_SPECULAR,color);
     mat.specular=Vec4(color.r,color.g,color.b,1.0);
+    float shininess;
+    material->Get(AI_MATKEY_SHININESS_STRENGTH,shininess);
+    mat.shininess=shininess;
 
     return Mesh(vertices,indices,textures,mat);
 }
@@ -167,13 +171,13 @@ void Model::scaleTo(float xs, float ys, float zs) {
 
 void Model::rotate(float pitch, float yaw, float roll) {
     Quat temp=glm::quat(glm::vec3(glm::radians(pitch),glm::radians(yaw),glm::radians(roll)));
-    _rotation=temp*_rotation;
+    _rotation=_rotation*temp;
 }
 
 Mat4 Model::getModelMatrix() const {
     Mat4 result(1.0f);
-    result=glm::scale(result,_scale);
-    result=glm::mat4_cast(_rotation)*result;
     result=glm::translate(result,_position);
+    result=result*glm::mat4_cast(_rotation);
+    result=glm::scale(result,_scale);
     return result;
 }

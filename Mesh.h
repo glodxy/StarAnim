@@ -44,6 +44,7 @@ typedef struct{
     Vec4 ambient;
     Vec4 diffuse;
     Vec4 specular;
+    float shininess;
 }Material;
 
 class Mesh {

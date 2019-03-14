@@ -34,6 +34,7 @@ protected:
     LightType _type;
     Shader *_shader;
     String _name;
-    Vec3 _ambient,_diffuse,_specular;
+    Vec3 _ambient;
+    Vec3 _diffuse,_specular;
 };
 #endif //TEST_LIGHT_H

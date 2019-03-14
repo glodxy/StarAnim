@@ -16,6 +16,7 @@ public:
     virtual void use();
     void setPosition(const Vec3&position);
     void setPosition(float x,float y,float z);
+    void setLightStrenth(float constant,float linear,float quadratic);
 private:
     Vec3 _position;
     float _constant,_linear,_quadratic;
