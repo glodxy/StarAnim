@@ -136,6 +136,15 @@
 		<Unit filename="D:/learn/computer-graphic/StarAnim/Object.h">
 			<Option target="Test"/>
 		</Unit>
+		<Unit filename="D:/learn/computer-graphic/StarAnim/Scene/BaseScene.h">
+			<Option target="Test"/>
+		</Unit>
+		<Unit filename="D:/learn/computer-graphic/StarAnim/Scene/SkyBox.cpp">
+			<Option target="Test"/>
+		</Unit>
+		<Unit filename="D:/learn/computer-graphic/StarAnim/Scene/SkyBox.h">
+			<Option target="Test"/>
+		</Unit>
 		<Unit filename="D:/learn/computer-graphic/StarAnim/ShaderLoader.cpp">
 			<Option target="Test"/>
 		</Unit>

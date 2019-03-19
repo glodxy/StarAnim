@@ -22,8 +22,7 @@ typedef Vec2 UV;
 typedef Vec3 Tangent;
 typedef Vec3 Bitangent;
 
-typedef unsigned int ID;
-typedef unsigned int Index;
+
 
 typedef struct{
     Position position;

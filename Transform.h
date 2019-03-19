@@ -11,6 +11,7 @@
 #include <glm/gtc/type_ptr.hpp>
 #include <string>
 #include <vector>
+#include <iostream>
 
 typedef glm::vec2 Vec2;
 typedef glm::vec3 Vec3;
@@ -23,5 +24,6 @@ typedef std::string String;
 template <class T>
 using Vector=std::vector<T>;
 
-
+typedef unsigned int ID;
+typedef unsigned int Index;
 #endif //STARANIM_TRANSFORM_H

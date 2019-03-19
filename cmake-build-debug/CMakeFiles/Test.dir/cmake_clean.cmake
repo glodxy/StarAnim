@@ -11,6 +11,7 @@ file(REMOVE_RECURSE
   "CMakeFiles/Test.dir/Light/SpotLight.cpp.obj"
   "CMakeFiles/Test.dir/Light/DirLight.cpp.obj"
   "CMakeFiles/Test.dir/LightManager.cpp.obj"
+  "CMakeFiles/Test.dir/Scene/SkyBox.cpp.obj"
   "E:/project/Test/Test.pdb"
   "E:/project/Test/Test.exe"
   "E:/project/Test/Test.exe.manifest"

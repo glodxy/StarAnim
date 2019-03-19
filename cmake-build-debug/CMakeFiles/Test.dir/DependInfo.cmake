@@ -12,6 +12,7 @@ set(CMAKE_DEPENDS_CHECK_CXX
   "D:/learn/computer-graphic/StarAnim/LightManager.cpp" "D:/learn/computer-graphic/StarAnim/cmake-build-debug/CMakeFiles/Test.dir/LightManager.cpp.obj"
   "D:/learn/computer-graphic/StarAnim/Mesh.cpp" "D:/learn/computer-graphic/StarAnim/cmake-build-debug/CMakeFiles/Test.dir/Mesh.cpp.obj"
   "D:/learn/computer-graphic/StarAnim/Model.cpp" "D:/learn/computer-graphic/StarAnim/cmake-build-debug/CMakeFiles/Test.dir/Model.cpp.obj"
+  "D:/learn/computer-graphic/StarAnim/Scene/SkyBox.cpp" "D:/learn/computer-graphic/StarAnim/cmake-build-debug/CMakeFiles/Test.dir/Scene/SkyBox.cpp.obj"
   "D:/learn/computer-graphic/StarAnim/ShaderLoader.cpp" "D:/learn/computer-graphic/StarAnim/cmake-build-debug/CMakeFiles/Test.dir/ShaderLoader.cpp.obj"
   "D:/learn/computer-graphic/StarAnim/TextureLoader.cpp" "D:/learn/computer-graphic/StarAnim/cmake-build-debug/CMakeFiles/Test.dir/TextureLoader.cpp.obj"
   "D:/learn/computer-graphic/StarAnim/Timer.cpp" "D:/learn/computer-graphic/StarAnim/cmake-build-debug/CMakeFiles/Test.dir/Timer.cpp.obj"

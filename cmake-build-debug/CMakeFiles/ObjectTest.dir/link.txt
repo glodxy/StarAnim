@@ -1,3 +1,0 @@
-"D:\CLion 2018.2.4\bin\cmake\win\bin\cmake.exe" -E remove -f CMakeFiles\ObjectTest.dir/objects.a
-D:\Mingw\bin\ar.exe cr CMakeFiles\ObjectTest.dir/objects.a @CMakeFiles\ObjectTest.dir\objects1.rsp
-D:\Mingw\bin\g++.exe -g   -Wl,--whole-archive CMakeFiles\ObjectTest.dir/objects.a -Wl,--no-whole-archive  -o ObjectTest.exe -Wl,--out-implib,libObjectTest.dll.a -Wl,--major-image-version,0,--minor-image-version,0 @CMakeFiles\ObjectTest.dir\linklibs.rsp

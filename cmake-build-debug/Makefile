@@ -338,6 +338,33 @@ Model.cpp.s:
 	$(MAKE) -f CMakeFiles\Test.dir\build.make CMakeFiles/Test.dir/Model.cpp.s
 .PHONY : Model.cpp.s
 
+Scene/SkyBox.obj: Scene/SkyBox.cpp.obj
+
+.PHONY : Scene/SkyBox.obj
+
+# target to build an object file
+Scene/SkyBox.cpp.obj:
+	$(MAKE) -f CMakeFiles\Test.dir\build.make CMakeFiles/Test.dir/Scene/SkyBox.cpp.obj
+.PHONY : Scene/SkyBox.cpp.obj
+
+Scene/SkyBox.i: Scene/SkyBox.cpp.i
+
+.PHONY : Scene/SkyBox.i
+
+# target to preprocess a source file
+Scene/SkyBox.cpp.i:
+	$(MAKE) -f CMakeFiles\Test.dir\build.make CMakeFiles/Test.dir/Scene/SkyBox.cpp.i
+.PHONY : Scene/SkyBox.cpp.i
+
+Scene/SkyBox.s: Scene/SkyBox.cpp.s
+
+.PHONY : Scene/SkyBox.s
+
+# target to generate assembly for a file
+Scene/SkyBox.cpp.s:
+	$(MAKE) -f CMakeFiles\Test.dir\build.make CMakeFiles/Test.dir/Scene/SkyBox.cpp.s
+.PHONY : Scene/SkyBox.cpp.s
+
 ShaderLoader.obj: ShaderLoader.cpp.obj
 
 .PHONY : ShaderLoader.obj
@@ -479,6 +506,9 @@ help:
 	@echo ... Model.obj
 	@echo ... Model.i
 	@echo ... Model.s
+	@echo ... Scene/SkyBox.obj
+	@echo ... Scene/SkyBox.i
+	@echo ... Scene/SkyBox.s
 	@echo ... ShaderLoader.obj
 	@echo ... ShaderLoader.i
 	@echo ... ShaderLoader.s

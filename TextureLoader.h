@@ -6,17 +6,16 @@
 #define STARANIM_TEXTURELOADER_H
 
 
-
+#include "Transform.h"
 #include <GL/glew.h>
-#include <string>
-#include <iostream>
 
 #ifdef __cplusplus
 extern "C"{
 #endif
 
-    GLuint createTexture(const char* fileName,const std::string& directory);
-
+    GLuint createTexture(const char* fileName,const String& directory);
+    GLuint createCubemapByFile(const Vector<String>& faces,const String& directory);
+    GLuint createCubemapByName(const String&faceName,const String& directory);
 
 #ifdef __cplusplus
 };
