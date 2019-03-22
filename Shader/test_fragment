@@ -9,6 +9,7 @@ struct Material{
     vec3 diffuse;
     vec3 specular;
     float shininess;
+    float opacity;
 };
 
 struct DirLight{
@@ -171,15 +172,17 @@ void main()
     
     if(textureDiffuseSize>0){
         diffuseColor=texture(texture_diffuse[0],TexCoords);
+        ambientColor=diffuseColor;
+        diffuseColor.rgb=diffuseColor.rgb*material.diffuse;
         // for(int i=1;i<textureDiffuseSize;++i){
         //     vec4 temp=texture(texture_diffuse[i],TexCoords);
         //     diffuseColor=(1-temp.a)*temp+temp.a*diffuseColor;
         // }
-        ambientColor=diffuseColor;
+        ambientColor.rgb=ambientColor.rgb*material.ambient;
     }
     else{
-        ambientColor=vec4(material.ambient,1.0);
-        diffuseColor=vec4(material.diffuse,1.0);
+        ambientColor=vec4(material.ambient,material.opacity);
+        diffuseColor=vec4(material.diffuse,material.opacity);
     }
 
     if(textureSpecularSize>0){
@@ -191,7 +194,14 @@ void main()
         // }
     }
     else{
-        specularColor=vec4(material.specular,1.0);
+        if(textureDiffuseSize>0)
+        {
+            specularColor=texture(texture_diffuse[0],TexCoords);
+            specularColor.rgb=specularColor.rgb*material.specular;
+        }
+        else{
+            specularColor=vec4(material.specular,1.0);
+        }
     }
 
 
