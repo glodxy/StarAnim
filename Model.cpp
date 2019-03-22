@@ -113,6 +113,8 @@ Mesh Model::processMesh(aiMesh *mesh, const aiScene *scene) {
     float shininess;
     material->Get(AI_MATKEY_SHININESS_STRENGTH,shininess);
     mat.shininess=shininess;
+    material->Get(AI_MATKEY_OPACITY,shininess);
+    mat.opacity=shininess;
 
     return Mesh(vertices,indices,textures,mat);
 }
