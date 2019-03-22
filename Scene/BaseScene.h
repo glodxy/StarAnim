@@ -7,8 +7,10 @@
 
 #include "../Transform.h"
 #include "../ShaderLoader.h"
+#include "../TextureLoader.h"
+#include "../Camera.h"
 
-float defaultSkyboxVertices[] = {
+static float defaultSkyboxVertices[] = {
         // positions
         -1.0f,  1.0f, -1.0f,
         -1.0f, -1.0f, -1.0f,
@@ -56,10 +58,13 @@ float defaultSkyboxVertices[] = {
 
 class BaseScene{
 public:
-    BaseScene();
+    BaseScene():_position(0,0,0){
+        _camera=NULL;
+        _shader=NULL;
+    }
     virtual ~BaseScene(){}
 
-    virtual void use()=0;
+    virtual void draw()const=0;
 
     void setPosition(const Vec3& position){
         _position=position;
@@ -67,10 +72,14 @@ public:
     void BindShader(Shader *shader){
         _shader=shader;
     }
+    void BindCamera(Camera *camera){
+        _camera=camera;
+    }
 protected:
 
     Vec3 _position;
     Shader *_shader;
+    Camera* _camera;
 };
 
 #endif //TEST_BASESCENE_H

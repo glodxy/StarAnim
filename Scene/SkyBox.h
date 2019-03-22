@@ -7,15 +7,17 @@
 
 #include "BaseScene.h"
 
-class SkyBox {
+
+class SkyBox:public BaseScene{
 public:
-    SkyBox(const String& baseName,const String&rootPath,size_t verticesSize,float* vertices= nullptr);
-    virtual void use()const;
+    SkyBox(const String& baseName/*天空盒图片基础名*/,IMAGE_FORMAT format/*天空盒图片格式*/,const String&rootPath/*天空盒根路径*/,size_t verticesSize=108*sizeof(float),float* vertices= defaultSkyboxVertices);
+    virtual void draw()const;
 private:
     void setupVAO(float*vertices,size_t verticesSize);
-    void loadCubemap(const String&faceName);
+    void loadCubemap(const String&faceName,IMAGE_FORMAT format);
     String _directory;
     ID _VAO;
+    ID _CubeMap;
 };
 
 

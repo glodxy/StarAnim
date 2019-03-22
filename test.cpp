@@ -15,6 +15,7 @@
 #include "ShaderLoader.h"
 #include "TestLight.h"
 #include "LightManager.h"
+#include "Scene/SkyBox.h"
 
 LightManager* lightManager;
 int width,height;
@@ -30,6 +31,7 @@ bool keys[1024];
 bool clicked=false;
 Model *obj,*obj1;
 Model *scene0,*scene1,*scene2;
+SkyBox *skybox;
 //static ShaderInfo si{
 //        "vertex",
 //        "test_fragment"
@@ -99,6 +101,9 @@ void initShader(){
     scene1=new Model("e:/project/Test/scene/bg.x");
     scene2=new Model("e:/project/Test/scene/bg2.x");
 
+    skybox=new SkyBox("blue",tga,"e:/project/Test/hw_blue");
+    skybox->BindCamera(&camera);
+
     //obj=new Model("E:/project/Test/inory/inory.pmx");
     //obj1=new Model("E:/project/Test/IA/IAx/IAx.pmx");
     obj1=new Model("e:/project/Test/TDA Ice Cold Append Miku/TDA Ice Cold Append Miku.pmx");
@@ -110,8 +115,8 @@ void initShader(){
     InitLight();
     light=new PointLight(1.0,0.045,0.0075);
     light->setPosition(lightPos);
-    light->setAmbient(Vec3(0.05f,0.05f,0.05f));
-    light->setDiffuse(Vec3(0.8f,0.8f,0.8f));
+    light->setAmbient(Vec3(1.0f,1.0f,1.0f));
+    light->setDiffuse(Vec3(1.0f,1.0f,1.0f));
     light->setSpecular(lightColor);
 
 
@@ -135,6 +140,7 @@ void display(){
     double time=glfwGetTime();
     spotLight->setDirection(camera.front());
     spotLight->setPosition(camera.position());
+    skybox->draw();
     shader->Use();
     shader->setMat4(camera.getProjectionMatrix(),"projection");
     shader->setMat4(camera.getViewMatrix(),"view");
@@ -145,6 +151,7 @@ void display(){
     //scene1->draw(*shader);
     //scene2->draw(*shader);
 
+
     shader->setMat4(obj->getModelMatrix(),"model");
     obj->draw(*shader);
 
@@ -152,6 +159,8 @@ void display(){
     obj1->draw(*shader);
 
     DrawLight(&camera);
+
+
 }
 
 int main() {
@@ -198,7 +207,7 @@ int main() {
         //事件检查
         glfwPollEvents();
         do_move();
-        glClearColor(0.05f,0.05f,0.05f,1.0f);
+        glClearColor(0.8f,0.3f,0.2f,1.0f);
         glClear(GL_COLOR_BUFFER_BIT|GL_DEPTH_BUFFER_BIT);
 
         display();

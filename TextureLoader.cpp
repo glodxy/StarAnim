@@ -53,14 +53,15 @@ GLuint createTexture(const char* fileName,const String& directory){
     return texture;
 }
 
-GLuint createCubemapByName(const String& faceName,const String& directory){
+GLuint createCubemapByName(const String& faceName,const String& directory,IMAGE_FORMAT format){
     Vector<String> temp(6);
-    temp[0]=faceName+"_rt.jpg";
-    temp[1]=faceName+"_lf.jpg";
-    temp[2]=faceName+"_up.jpg";
-    temp[3]=faceName+"_dn.jpg";
-    temp[4]=faceName+"_ft.jpg";
-    temp[5]=faceName+"_bk.jpg";
+    String f=getFormatStr(format);
+    temp[0]=faceName+"_rt"+f;
+    temp[1]=faceName+"_lf"+f;
+    temp[2]=faceName+"_up"+f;
+    temp[3]=faceName+"_dn"+f;
+    temp[4]=faceName+"_bk"+f;
+    temp[5]=faceName+"_ft"+f;
 
     return createCubemapByFile(temp,directory);
 }

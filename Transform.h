@@ -13,9 +13,12 @@
 #include <vector>
 #include <iostream>
 
+
+
 typedef glm::vec2 Vec2;
 typedef glm::vec3 Vec3;
 typedef glm::vec4 Vec4;
+typedef glm::mat3 Mat3;
 typedef glm::mat4 Mat4;
 typedef glm::quat Quat;
 
@@ -26,4 +29,18 @@ using Vector=std::vector<T>;
 
 typedef unsigned int ID;
 typedef unsigned int Index;
+
+
+enum IMAGE_FORMAT{tga,jpg,jpeg,png};
+
+static String getFormatStr(IMAGE_FORMAT f){
+    switch(f)
+    {
+        case tga:return ".tga";
+        case jpg:return ".jpg";
+        case jpeg:return ".jpeg";
+        case png:return ".png";
+    }
+}
+
 #endif //STARANIM_TRANSFORM_H

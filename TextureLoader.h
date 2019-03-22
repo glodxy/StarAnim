@@ -15,7 +15,7 @@ extern "C"{
 
     GLuint createTexture(const char* fileName,const String& directory);
     GLuint createCubemapByFile(const Vector<String>& faces,const String& directory);
-    GLuint createCubemapByName(const String&faceName,const String& directory);
+    GLuint createCubemapByName(const String&faceName,const String& directory,IMAGE_FORMAT format);
 
 #ifdef __cplusplus
 };
