@@ -132,6 +132,7 @@ void initShader(){
     lightManager->addLight(DIR_LIGHT,dirLight);
     lightManager->bindShader(shader);
     glEnable(GL_DEPTH_TEST);
+    glEnable(GL_MULTISAMPLE);
     glEnable(GL_BLEND);
     glBlendFunc(GL_SRC_ALPHA, GL_ONE_MINUS_SRC_ALPHA);
 }
@@ -174,6 +175,8 @@ int main() {
     glfwWindowHint(GLFW_OPENGL_PROFILE,GLFW_OPENGL_CORE_PROFILE);
     //关闭窗口大小可变
     glfwWindowHint(GLFW_RESIZABLE,GL_FALSE);
+    //设置采样数
+    glfwWindowHint(GLFW_SAMPLES,4);
 
     GLFWwindow* window=glfwCreateWindow(800,600,"test", nullptr, nullptr);
     if(window== nullptr)

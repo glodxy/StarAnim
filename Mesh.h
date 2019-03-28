@@ -40,11 +40,11 @@ typedef struct{
 }Texture;
 
 typedef struct{
-    Vec4 ambient;
-    Vec4 diffuse;
-    Vec4 specular;
+    Vec4 ambient=Vec4(1.0,1.0,1.0,1.0);
+    Vec4 diffuse=Vec4(1.0,1.0,1.0,1.0);
+    Vec4 specular=Vec4(1.0,1.0,1.0,1.0);
     float shininess;
-    float opacity;
+    float opacity=1.0;
 }Material;
 
 class Mesh {
