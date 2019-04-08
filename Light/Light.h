@@ -8,7 +8,7 @@
 #ifndef TEST_LIGHT_H
 #define TEST_LIGHT_H
 
-#include "../ShaderLoader.h"
+#include "../Loader/ShaderLoader.h"
 #include "../Transform.h"
 
 enum LightType{

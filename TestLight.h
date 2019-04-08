@@ -6,8 +6,8 @@
 #define TEST_TESTLIGHT_H
 
 #include <GL/glew.h>
-#include "ShaderLoader.h"
-#include "Camera.h"
+#include "Loader/ShaderLoader.h"
+#include "Camera/Camera.h"
 Shader* ls;
 unsigned int _LIGHT;
 Vec3 lightColor(1.0f,1.0f,1.0f);

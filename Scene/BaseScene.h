@@ -6,9 +6,9 @@
 #define TEST_BASESCENE_H
 
 #include "../Transform.h"
-#include "../ShaderLoader.h"
-#include "../TextureLoader.h"
-#include "../Camera.h"
+#include "../Loader/ShaderLoader.h"
+#include "../Loader/TextureLoader.h"
+#include "../Camera/Camera.h"
 
 static float defaultSkyboxVertices[] = {
         // positions
@@ -58,28 +58,23 @@ static float defaultSkyboxVertices[] = {
 
 class BaseScene{
 public:
-    BaseScene():_position(0,0,0){
-        _camera=NULL;
-        _shader=NULL;
-    }
+    BaseScene(const String& rootPath);
     virtual ~BaseScene(){}
 
     virtual void draw()const=0;
 
-    void setPosition(const Vec3& position){
-        _position=position;
-    }
-    void BindShader(Shader *shader){
-        _shader=shader;
-    }
-    void BindCamera(Camera *camera){
-        _camera=camera;
-    }
+    void setPosition(const Vec3& position);
+    void BindShader(Shader *shader);
+    void BindCamera(Camera *camera);
 protected:
 
+    void setupVAO(float*vertices,size_t verticesSize);
+
+    String _directory;
     Vec3 _position;
     Shader *_shader;
     Camera* _camera;
+    ID _VAO;
 };
 
 #endif //TEST_BASESCENE_H

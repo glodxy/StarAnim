@@ -122,32 +122,32 @@ Test/fast:
 	$(MAKE) -f CMakeFiles\Test.dir\build.make CMakeFiles/Test.dir/build
 .PHONY : Test/fast
 
-Camera.obj: Camera.cpp.obj
+Camera/Camera.obj: Camera/Camera.cpp.obj
 
-.PHONY : Camera.obj
+.PHONY : Camera/Camera.obj
 
 # target to build an object file
-Camera.cpp.obj:
-	$(MAKE) -f CMakeFiles\Test.dir\build.make CMakeFiles/Test.dir/Camera.cpp.obj
-.PHONY : Camera.cpp.obj
+Camera/Camera.cpp.obj:
+	$(MAKE) -f CMakeFiles\Test.dir\build.make CMakeFiles/Test.dir/Camera/Camera.cpp.obj
+.PHONY : Camera/Camera.cpp.obj
 
-Camera.i: Camera.cpp.i
+Camera/Camera.i: Camera/Camera.cpp.i
 
-.PHONY : Camera.i
+.PHONY : Camera/Camera.i
 
 # target to preprocess a source file
-Camera.cpp.i:
-	$(MAKE) -f CMakeFiles\Test.dir\build.make CMakeFiles/Test.dir/Camera.cpp.i
-.PHONY : Camera.cpp.i
+Camera/Camera.cpp.i:
+	$(MAKE) -f CMakeFiles\Test.dir\build.make CMakeFiles/Test.dir/Camera/Camera.cpp.i
+.PHONY : Camera/Camera.cpp.i
 
-Camera.s: Camera.cpp.s
+Camera/Camera.s: Camera/Camera.cpp.s
 
-.PHONY : Camera.s
+.PHONY : Camera/Camera.s
 
 # target to generate assembly for a file
-Camera.cpp.s:
-	$(MAKE) -f CMakeFiles\Test.dir\build.make CMakeFiles/Test.dir/Camera.cpp.s
-.PHONY : Camera.cpp.s
+Camera/Camera.cpp.s:
+	$(MAKE) -f CMakeFiles\Test.dir\build.make CMakeFiles/Test.dir/Camera/Camera.cpp.s
+.PHONY : Camera/Camera.cpp.s
 
 Light/DirLight.obj: Light/DirLight.cpp.obj
 
@@ -284,59 +284,167 @@ LightManager.cpp.s:
 	$(MAKE) -f CMakeFiles\Test.dir\build.make CMakeFiles/Test.dir/LightManager.cpp.s
 .PHONY : LightManager.cpp.s
 
-Mesh.obj: Mesh.cpp.obj
+Loader/ShaderLoader.obj: Loader/ShaderLoader.cpp.obj
 
-.PHONY : Mesh.obj
-
-# target to build an object file
-Mesh.cpp.obj:
-	$(MAKE) -f CMakeFiles\Test.dir\build.make CMakeFiles/Test.dir/Mesh.cpp.obj
-.PHONY : Mesh.cpp.obj
-
-Mesh.i: Mesh.cpp.i
-
-.PHONY : Mesh.i
-
-# target to preprocess a source file
-Mesh.cpp.i:
-	$(MAKE) -f CMakeFiles\Test.dir\build.make CMakeFiles/Test.dir/Mesh.cpp.i
-.PHONY : Mesh.cpp.i
-
-Mesh.s: Mesh.cpp.s
-
-.PHONY : Mesh.s
-
-# target to generate assembly for a file
-Mesh.cpp.s:
-	$(MAKE) -f CMakeFiles\Test.dir\build.make CMakeFiles/Test.dir/Mesh.cpp.s
-.PHONY : Mesh.cpp.s
-
-Model.obj: Model.cpp.obj
-
-.PHONY : Model.obj
+.PHONY : Loader/ShaderLoader.obj
 
 # target to build an object file
-Model.cpp.obj:
-	$(MAKE) -f CMakeFiles\Test.dir\build.make CMakeFiles/Test.dir/Model.cpp.obj
-.PHONY : Model.cpp.obj
+Loader/ShaderLoader.cpp.obj:
+	$(MAKE) -f CMakeFiles\Test.dir\build.make CMakeFiles/Test.dir/Loader/ShaderLoader.cpp.obj
+.PHONY : Loader/ShaderLoader.cpp.obj
 
-Model.i: Model.cpp.i
+Loader/ShaderLoader.i: Loader/ShaderLoader.cpp.i
 
-.PHONY : Model.i
+.PHONY : Loader/ShaderLoader.i
 
 # target to preprocess a source file
-Model.cpp.i:
-	$(MAKE) -f CMakeFiles\Test.dir\build.make CMakeFiles/Test.dir/Model.cpp.i
-.PHONY : Model.cpp.i
+Loader/ShaderLoader.cpp.i:
+	$(MAKE) -f CMakeFiles\Test.dir\build.make CMakeFiles/Test.dir/Loader/ShaderLoader.cpp.i
+.PHONY : Loader/ShaderLoader.cpp.i
 
-Model.s: Model.cpp.s
+Loader/ShaderLoader.s: Loader/ShaderLoader.cpp.s
 
-.PHONY : Model.s
+.PHONY : Loader/ShaderLoader.s
 
 # target to generate assembly for a file
-Model.cpp.s:
-	$(MAKE) -f CMakeFiles\Test.dir\build.make CMakeFiles/Test.dir/Model.cpp.s
-.PHONY : Model.cpp.s
+Loader/ShaderLoader.cpp.s:
+	$(MAKE) -f CMakeFiles\Test.dir\build.make CMakeFiles/Test.dir/Loader/ShaderLoader.cpp.s
+.PHONY : Loader/ShaderLoader.cpp.s
+
+Loader/TextureLoader.obj: Loader/TextureLoader.cpp.obj
+
+.PHONY : Loader/TextureLoader.obj
+
+# target to build an object file
+Loader/TextureLoader.cpp.obj:
+	$(MAKE) -f CMakeFiles\Test.dir\build.make CMakeFiles/Test.dir/Loader/TextureLoader.cpp.obj
+.PHONY : Loader/TextureLoader.cpp.obj
+
+Loader/TextureLoader.i: Loader/TextureLoader.cpp.i
+
+.PHONY : Loader/TextureLoader.i
+
+# target to preprocess a source file
+Loader/TextureLoader.cpp.i:
+	$(MAKE) -f CMakeFiles\Test.dir\build.make CMakeFiles/Test.dir/Loader/TextureLoader.cpp.i
+.PHONY : Loader/TextureLoader.cpp.i
+
+Loader/TextureLoader.s: Loader/TextureLoader.cpp.s
+
+.PHONY : Loader/TextureLoader.s
+
+# target to generate assembly for a file
+Loader/TextureLoader.cpp.s:
+	$(MAKE) -f CMakeFiles\Test.dir\build.make CMakeFiles/Test.dir/Loader/TextureLoader.cpp.s
+.PHONY : Loader/TextureLoader.cpp.s
+
+Model/Mesh.obj: Model/Mesh.cpp.obj
+
+.PHONY : Model/Mesh.obj
+
+# target to build an object file
+Model/Mesh.cpp.obj:
+	$(MAKE) -f CMakeFiles\Test.dir\build.make CMakeFiles/Test.dir/Model/Mesh.cpp.obj
+.PHONY : Model/Mesh.cpp.obj
+
+Model/Mesh.i: Model/Mesh.cpp.i
+
+.PHONY : Model/Mesh.i
+
+# target to preprocess a source file
+Model/Mesh.cpp.i:
+	$(MAKE) -f CMakeFiles\Test.dir\build.make CMakeFiles/Test.dir/Model/Mesh.cpp.i
+.PHONY : Model/Mesh.cpp.i
+
+Model/Mesh.s: Model/Mesh.cpp.s
+
+.PHONY : Model/Mesh.s
+
+# target to generate assembly for a file
+Model/Mesh.cpp.s:
+	$(MAKE) -f CMakeFiles\Test.dir\build.make CMakeFiles/Test.dir/Model/Mesh.cpp.s
+.PHONY : Model/Mesh.cpp.s
+
+Model/Model.obj: Model/Model.cpp.obj
+
+.PHONY : Model/Model.obj
+
+# target to build an object file
+Model/Model.cpp.obj:
+	$(MAKE) -f CMakeFiles\Test.dir\build.make CMakeFiles/Test.dir/Model/Model.cpp.obj
+.PHONY : Model/Model.cpp.obj
+
+Model/Model.i: Model/Model.cpp.i
+
+.PHONY : Model/Model.i
+
+# target to preprocess a source file
+Model/Model.cpp.i:
+	$(MAKE) -f CMakeFiles\Test.dir\build.make CMakeFiles/Test.dir/Model/Model.cpp.i
+.PHONY : Model/Model.cpp.i
+
+Model/Model.s: Model/Model.cpp.s
+
+.PHONY : Model/Model.s
+
+# target to generate assembly for a file
+Model/Model.cpp.s:
+	$(MAKE) -f CMakeFiles\Test.dir\build.make CMakeFiles/Test.dir/Model/Model.cpp.s
+.PHONY : Model/Model.cpp.s
+
+Scene/BaseScene.obj: Scene/BaseScene.cpp.obj
+
+.PHONY : Scene/BaseScene.obj
+
+# target to build an object file
+Scene/BaseScene.cpp.obj:
+	$(MAKE) -f CMakeFiles\Test.dir\build.make CMakeFiles/Test.dir/Scene/BaseScene.cpp.obj
+.PHONY : Scene/BaseScene.cpp.obj
+
+Scene/BaseScene.i: Scene/BaseScene.cpp.i
+
+.PHONY : Scene/BaseScene.i
+
+# target to preprocess a source file
+Scene/BaseScene.cpp.i:
+	$(MAKE) -f CMakeFiles\Test.dir\build.make CMakeFiles/Test.dir/Scene/BaseScene.cpp.i
+.PHONY : Scene/BaseScene.cpp.i
+
+Scene/BaseScene.s: Scene/BaseScene.cpp.s
+
+.PHONY : Scene/BaseScene.s
+
+# target to generate assembly for a file
+Scene/BaseScene.cpp.s:
+	$(MAKE) -f CMakeFiles\Test.dir\build.make CMakeFiles/Test.dir/Scene/BaseScene.cpp.s
+.PHONY : Scene/BaseScene.cpp.s
+
+Scene/Flat.obj: Scene/Flat.cpp.obj
+
+.PHONY : Scene/Flat.obj
+
+# target to build an object file
+Scene/Flat.cpp.obj:
+	$(MAKE) -f CMakeFiles\Test.dir\build.make CMakeFiles/Test.dir/Scene/Flat.cpp.obj
+.PHONY : Scene/Flat.cpp.obj
+
+Scene/Flat.i: Scene/Flat.cpp.i
+
+.PHONY : Scene/Flat.i
+
+# target to preprocess a source file
+Scene/Flat.cpp.i:
+	$(MAKE) -f CMakeFiles\Test.dir\build.make CMakeFiles/Test.dir/Scene/Flat.cpp.i
+.PHONY : Scene/Flat.cpp.i
+
+Scene/Flat.s: Scene/Flat.cpp.s
+
+.PHONY : Scene/Flat.s
+
+# target to generate assembly for a file
+Scene/Flat.cpp.s:
+	$(MAKE) -f CMakeFiles\Test.dir\build.make CMakeFiles/Test.dir/Scene/Flat.cpp.s
+.PHONY : Scene/Flat.cpp.s
 
 Scene/SkyBox.obj: Scene/SkyBox.cpp.obj
 
@@ -364,60 +472,6 @@ Scene/SkyBox.s: Scene/SkyBox.cpp.s
 Scene/SkyBox.cpp.s:
 	$(MAKE) -f CMakeFiles\Test.dir\build.make CMakeFiles/Test.dir/Scene/SkyBox.cpp.s
 .PHONY : Scene/SkyBox.cpp.s
-
-ShaderLoader.obj: ShaderLoader.cpp.obj
-
-.PHONY : ShaderLoader.obj
-
-# target to build an object file
-ShaderLoader.cpp.obj:
-	$(MAKE) -f CMakeFiles\Test.dir\build.make CMakeFiles/Test.dir/ShaderLoader.cpp.obj
-.PHONY : ShaderLoader.cpp.obj
-
-ShaderLoader.i: ShaderLoader.cpp.i
-
-.PHONY : ShaderLoader.i
-
-# target to preprocess a source file
-ShaderLoader.cpp.i:
-	$(MAKE) -f CMakeFiles\Test.dir\build.make CMakeFiles/Test.dir/ShaderLoader.cpp.i
-.PHONY : ShaderLoader.cpp.i
-
-ShaderLoader.s: ShaderLoader.cpp.s
-
-.PHONY : ShaderLoader.s
-
-# target to generate assembly for a file
-ShaderLoader.cpp.s:
-	$(MAKE) -f CMakeFiles\Test.dir\build.make CMakeFiles/Test.dir/ShaderLoader.cpp.s
-.PHONY : ShaderLoader.cpp.s
-
-TextureLoader.obj: TextureLoader.cpp.obj
-
-.PHONY : TextureLoader.obj
-
-# target to build an object file
-TextureLoader.cpp.obj:
-	$(MAKE) -f CMakeFiles\Test.dir\build.make CMakeFiles/Test.dir/TextureLoader.cpp.obj
-.PHONY : TextureLoader.cpp.obj
-
-TextureLoader.i: TextureLoader.cpp.i
-
-.PHONY : TextureLoader.i
-
-# target to preprocess a source file
-TextureLoader.cpp.i:
-	$(MAKE) -f CMakeFiles\Test.dir\build.make CMakeFiles/Test.dir/TextureLoader.cpp.i
-.PHONY : TextureLoader.cpp.i
-
-TextureLoader.s: TextureLoader.cpp.s
-
-.PHONY : TextureLoader.s
-
-# target to generate assembly for a file
-TextureLoader.cpp.s:
-	$(MAKE) -f CMakeFiles\Test.dir\build.make CMakeFiles/Test.dir/TextureLoader.cpp.s
-.PHONY : TextureLoader.cpp.s
 
 Timer.obj: Timer.cpp.obj
 
@@ -482,9 +536,9 @@ help:
 	@echo ... rebuild_cache
 	@echo ... Test
 	@echo ... edit_cache
-	@echo ... Camera.obj
-	@echo ... Camera.i
-	@echo ... Camera.s
+	@echo ... Camera/Camera.obj
+	@echo ... Camera/Camera.i
+	@echo ... Camera/Camera.s
 	@echo ... Light/DirLight.obj
 	@echo ... Light/DirLight.i
 	@echo ... Light/DirLight.s
@@ -500,21 +554,27 @@ help:
 	@echo ... LightManager.obj
 	@echo ... LightManager.i
 	@echo ... LightManager.s
-	@echo ... Mesh.obj
-	@echo ... Mesh.i
-	@echo ... Mesh.s
-	@echo ... Model.obj
-	@echo ... Model.i
-	@echo ... Model.s
+	@echo ... Loader/ShaderLoader.obj
+	@echo ... Loader/ShaderLoader.i
+	@echo ... Loader/ShaderLoader.s
+	@echo ... Loader/TextureLoader.obj
+	@echo ... Loader/TextureLoader.i
+	@echo ... Loader/TextureLoader.s
+	@echo ... Model/Mesh.obj
+	@echo ... Model/Mesh.i
+	@echo ... Model/Mesh.s
+	@echo ... Model/Model.obj
+	@echo ... Model/Model.i
+	@echo ... Model/Model.s
+	@echo ... Scene/BaseScene.obj
+	@echo ... Scene/BaseScene.i
+	@echo ... Scene/BaseScene.s
+	@echo ... Scene/Flat.obj
+	@echo ... Scene/Flat.i
+	@echo ... Scene/Flat.s
 	@echo ... Scene/SkyBox.obj
 	@echo ... Scene/SkyBox.i
 	@echo ... Scene/SkyBox.s
-	@echo ... ShaderLoader.obj
-	@echo ... ShaderLoader.i
-	@echo ... ShaderLoader.s
-	@echo ... TextureLoader.obj
-	@echo ... TextureLoader.i
-	@echo ... TextureLoader.s
 	@echo ... Timer.obj
 	@echo ... Timer.i
 	@echo ... Timer.s

@@ -6,10 +6,10 @@
 
 #IncludeRegexTransform: 
 
-D:/learn/computer-graphic/StarAnim/Camera.h
+D:/learn/computer-graphic/StarAnim/Camera/Camera.h
 GL/glew.h
 -
-Transform.h
+../Transform.h
 D:/learn/computer-graphic/StarAnim/Transform.h
 
 D:/learn/computer-graphic/StarAnim/Light/DirLight.h
@@ -17,8 +17,8 @@ Light.h
 D:/learn/computer-graphic/StarAnim/Light/Light.h
 
 D:/learn/computer-graphic/StarAnim/Light/Light.h
-../ShaderLoader.h
-D:/learn/computer-graphic/StarAnim/ShaderLoader.h
+../Loader/ShaderLoader.h
+D:/learn/computer-graphic/StarAnim/Loader/ShaderLoader.h
 ../Transform.h
 D:/learn/computer-graphic/StarAnim/Transform.h
 
@@ -46,25 +46,31 @@ D:/learn/computer-graphic/StarAnim/Light/Light_include.h
 iostream
 -
 
-D:/learn/computer-graphic/StarAnim/Mesh.cpp
-Mesh.h
-D:/learn/computer-graphic/StarAnim/Mesh.h
+D:/learn/computer-graphic/StarAnim/Loader/ShaderLoader.h
+GL/glew.h
+-
+cstdio
+-
+../Transform.h
+D:/learn/computer-graphic/StarAnim/Transform.h
 
-D:/learn/computer-graphic/StarAnim/Mesh.h
+D:/learn/computer-graphic/StarAnim/Loader/TextureLoader.h
+../Transform.h
+D:/learn/computer-graphic/StarAnim/Transform.h
+GL/glew.h
+-
+
+D:/learn/computer-graphic/StarAnim/Model/Mesh.h
 iostream
 -
 string
 -
-Transform.h
+../Transform.h
 D:/learn/computer-graphic/StarAnim/Transform.h
-ShaderLoader.h
-D:/learn/computer-graphic/StarAnim/ShaderLoader.h
+../Loader/ShaderLoader.h
+D:/learn/computer-graphic/StarAnim/Loader/ShaderLoader.h
 
-D:/learn/computer-graphic/StarAnim/Model.cpp
-Model.h
-D:/learn/computer-graphic/StarAnim/Model.h
-
-D:/learn/computer-graphic/StarAnim/Model.h
+D:/learn/computer-graphic/StarAnim/Model/Model.h
 assimp/Importer.hpp
 -
 assimp/scene.h
@@ -72,45 +78,31 @@ assimp/scene.h
 assimp/postprocess.h
 -
 Mesh.h
-D:/learn/computer-graphic/StarAnim/Mesh.h
-TextureLoader.h
-D:/learn/computer-graphic/StarAnim/TextureLoader.h
+D:/learn/computer-graphic/StarAnim/Model/Mesh.h
+../Loader/TextureLoader.h
+D:/learn/computer-graphic/StarAnim/Loader/TextureLoader.h
 
 D:/learn/computer-graphic/StarAnim/Scene/BaseScene.h
 ../Transform.h
 D:/learn/computer-graphic/StarAnim/Transform.h
-../ShaderLoader.h
-D:/learn/computer-graphic/StarAnim/ShaderLoader.h
-../TextureLoader.h
-D:/learn/computer-graphic/StarAnim/TextureLoader.h
-../Camera.h
-D:/learn/computer-graphic/StarAnim/Camera.h
+../Loader/ShaderLoader.h
+D:/learn/computer-graphic/StarAnim/Loader/ShaderLoader.h
+../Loader/TextureLoader.h
+D:/learn/computer-graphic/StarAnim/Loader/TextureLoader.h
+../Camera/Camera.h
+D:/learn/computer-graphic/StarAnim/Camera/Camera.h
 
 D:/learn/computer-graphic/StarAnim/Scene/SkyBox.h
 BaseScene.h
 D:/learn/computer-graphic/StarAnim/Scene/BaseScene.h
 
-D:/learn/computer-graphic/StarAnim/ShaderLoader.h
-GL/glew.h
--
-cstdio
--
-Transform.h
-D:/learn/computer-graphic/StarAnim/Transform.h
-
 D:/learn/computer-graphic/StarAnim/TestLight.h
 GL/glew.h
 -
-ShaderLoader.h
-D:/learn/computer-graphic/StarAnim/ShaderLoader.h
-Camera.h
-D:/learn/computer-graphic/StarAnim/Camera.h
-
-D:/learn/computer-graphic/StarAnim/TextureLoader.h
-Transform.h
-D:/learn/computer-graphic/StarAnim/Transform.h
-GL/glew.h
--
+Loader/ShaderLoader.h
+D:/learn/computer-graphic/StarAnim/Loader/ShaderLoader.h
+Camera/Camera.h
+D:/learn/computer-graphic/StarAnim/Camera/Camera.h
 
 D:/learn/computer-graphic/StarAnim/Transform.h
 GL/glew.h
@@ -139,16 +131,16 @@ cmath
 -
 string.h
 -
-TextureLoader.h
-D:/learn/computer-graphic/StarAnim/TextureLoader.h
+Loader/TextureLoader.h
+D:/learn/computer-graphic/StarAnim/Loader/TextureLoader.h
 Transform.h
 D:/learn/computer-graphic/StarAnim/Transform.h
-Camera.h
-D:/learn/computer-graphic/StarAnim/Camera.h
-Model.h
-D:/learn/computer-graphic/StarAnim/Model.h
-ShaderLoader.h
-D:/learn/computer-graphic/StarAnim/ShaderLoader.h
+Camera/Camera.h
+D:/learn/computer-graphic/StarAnim/Camera/Camera.h
+Model/Model.h
+D:/learn/computer-graphic/StarAnim/Model/Model.h
+Loader/ShaderLoader.h
+D:/learn/computer-graphic/StarAnim/Loader/ShaderLoader.h
 TestLight.h
 D:/learn/computer-graphic/StarAnim/TestLight.h
 LightManager.h

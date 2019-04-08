@@ -82,10 +82,10 @@
 				</MakeCommands>
 			</Target>
 		</Build>
-		<Unit filename="D:/learn/computer-graphic/StarAnim/Camera.cpp">
+		<Unit filename="D:/learn/computer-graphic/StarAnim/Camera/Camera.cpp">
 			<Option target="Test"/>
 		</Unit>
-		<Unit filename="D:/learn/computer-graphic/StarAnim/Camera.h">
+		<Unit filename="D:/learn/computer-graphic/StarAnim/Camera/Camera.h">
 			<Option target="Test"/>
 		</Unit>
 		<Unit filename="D:/learn/computer-graphic/StarAnim/Light/DirLight.cpp">
@@ -121,22 +121,43 @@
 		<Unit filename="D:/learn/computer-graphic/StarAnim/LightManager.h">
 			<Option target="Test"/>
 		</Unit>
-		<Unit filename="D:/learn/computer-graphic/StarAnim/Mesh.cpp">
+		<Unit filename="D:/learn/computer-graphic/StarAnim/Loader/ShaderLoader.cpp">
 			<Option target="Test"/>
 		</Unit>
-		<Unit filename="D:/learn/computer-graphic/StarAnim/Mesh.h">
+		<Unit filename="D:/learn/computer-graphic/StarAnim/Loader/ShaderLoader.h">
 			<Option target="Test"/>
 		</Unit>
-		<Unit filename="D:/learn/computer-graphic/StarAnim/Model.cpp">
+		<Unit filename="D:/learn/computer-graphic/StarAnim/Loader/TextureLoader.cpp">
 			<Option target="Test"/>
 		</Unit>
-		<Unit filename="D:/learn/computer-graphic/StarAnim/Model.h">
+		<Unit filename="D:/learn/computer-graphic/StarAnim/Loader/TextureLoader.h">
+			<Option target="Test"/>
+		</Unit>
+		<Unit filename="D:/learn/computer-graphic/StarAnim/Model/Mesh.cpp">
+			<Option target="Test"/>
+		</Unit>
+		<Unit filename="D:/learn/computer-graphic/StarAnim/Model/Mesh.h">
+			<Option target="Test"/>
+		</Unit>
+		<Unit filename="D:/learn/computer-graphic/StarAnim/Model/Model.cpp">
+			<Option target="Test"/>
+		</Unit>
+		<Unit filename="D:/learn/computer-graphic/StarAnim/Model/Model.h">
 			<Option target="Test"/>
 		</Unit>
 		<Unit filename="D:/learn/computer-graphic/StarAnim/Object.h">
 			<Option target="Test"/>
 		</Unit>
+		<Unit filename="D:/learn/computer-graphic/StarAnim/Scene/BaseScene.cpp">
+			<Option target="Test"/>
+		</Unit>
 		<Unit filename="D:/learn/computer-graphic/StarAnim/Scene/BaseScene.h">
+			<Option target="Test"/>
+		</Unit>
+		<Unit filename="D:/learn/computer-graphic/StarAnim/Scene/Flat.cpp">
+			<Option target="Test"/>
+		</Unit>
+		<Unit filename="D:/learn/computer-graphic/StarAnim/Scene/Flat.h">
 			<Option target="Test"/>
 		</Unit>
 		<Unit filename="D:/learn/computer-graphic/StarAnim/Scene/SkyBox.cpp">
@@ -145,19 +166,7 @@
 		<Unit filename="D:/learn/computer-graphic/StarAnim/Scene/SkyBox.h">
 			<Option target="Test"/>
 		</Unit>
-		<Unit filename="D:/learn/computer-graphic/StarAnim/ShaderLoader.cpp">
-			<Option target="Test"/>
-		</Unit>
-		<Unit filename="D:/learn/computer-graphic/StarAnim/ShaderLoader.h">
-			<Option target="Test"/>
-		</Unit>
 		<Unit filename="D:/learn/computer-graphic/StarAnim/TestLight.h">
-			<Option target="Test"/>
-		</Unit>
-		<Unit filename="D:/learn/computer-graphic/StarAnim/TextureLoader.cpp">
-			<Option target="Test"/>
-		</Unit>
-		<Unit filename="D:/learn/computer-graphic/StarAnim/TextureLoader.h">
 			<Option target="Test"/>
 		</Unit>
 		<Unit filename="D:/learn/computer-graphic/StarAnim/Timer.cpp">

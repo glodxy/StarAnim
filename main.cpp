@@ -4,10 +4,10 @@
 #include <GLFW/glfw3.h>
 #include <cmath>
 
-#include "ShaderLoader.h"
-#include "TextureLoader.h"
+#include "Loader/ShaderLoader.h"
+#include "Loader/TextureLoader.h"
 #include "Transform.h"
-#include "Camera.h"
+#include "Camera/Camera.h"
 
 int width,height;
 glm::vec3 lightPos(1.2f, 1.0f, 2.0f);

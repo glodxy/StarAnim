@@ -8,11 +8,11 @@
 #include <cmath>
 #include <string.h>
 
-#include "TextureLoader.h"
+#include "Loader/TextureLoader.h"
 #include "Transform.h"
-#include "Camera.h"
-#include "Model.h"
-#include "ShaderLoader.h"
+#include "Camera/Camera.h"
+#include "Model/Model.h"
+#include "Loader/ShaderLoader.h"
 #include "TestLight.h"
 #include "LightManager.h"
 #include "Scene/SkyBox.h"
@@ -95,6 +95,7 @@ void initShader(){
     lightManager=LightManager::getLightManager();
     ls=new Shader("Vertex","light");
     shader=new Shader("Vertex","test_fragment");
+    shader->setBool(true,"blinn");
     camera=Camera(glm::vec3(0.0f,0.0f,3.0f));
 
     scene0=new Model("e:/project/Test/scene/rainbow.x");
@@ -106,12 +107,12 @@ void initShader(){
 
     //obj=new Model("E:/project/Test/inory/inory.pmx");
     //obj1=new Model("E:/project/Test/IA/IAx/IAx.pmx");
-    obj1=new Model("e:/project/Test/TDA Ice Cold Append Miku/TDA Ice Cold Append Miku.pmx");
+    //obj1=new Model("e:/project/Test/TDA Ice Cold Append Miku/TDA Ice Cold Append Miku.pmx");
     obj=new Model("e:/project/Test/Tda China Dress Stardust Canary/Tda China Dress Stardust Canary.pmx");
     obj->setPosition(0.0f,0.0f,0.0f);
     obj->scaleTo(0.2f,0.2f,0.2f);
-    obj1->setPosition(10.0f,5.0f,0.0f);
-    obj1->scaleTo(0.1f,0.1f,0.1f);
+//    obj1->setPosition(10.0f,5.0f,0.0f);
+//    obj1->scaleTo(0.1f,0.1f,0.1f);
     InitLight();
     light=new PointLight(1.0,0.045,0.0075);
     light->setPosition(lightPos);
@@ -120,15 +121,15 @@ void initShader(){
     light->setSpecular(lightColor);
 
 
-    spotLight=new SpotLight(glm::cos(glm::radians(12.5f)),glm::cos(glm::radians(15.0f)),camera.front(),1.0f,0.09f,0.032f,camera.position());
-    spotLight->setAmbient(Vec3(0.0f,0.0f,0.0f));
-    spotLight->setDiffuse(Vec3(1.0f,1.0f,1.0f));
-    spotLight->setSpecular(Vec3(1.0f,1.0f,1.0f));
+//    spotLight=new SpotLight(glm::cos(glm::radians(12.5f)),glm::cos(glm::radians(15.0f)),camera.front(),1.0f,0.09f,0.032f,camera.position());
+//    spotLight->setAmbient(Vec3(0.0f,0.0f,0.0f));
+//    spotLight->setDiffuse(Vec3(1.0f,1.0f,1.0f));
+//    spotLight->setSpecular(Vec3(1.0f,1.0f,1.0f));
 
-    dirLight=new DirLight(Vec3(-1.0f,-1.0f,-1.0f),Vec3(0.05f,0.05f,0.05f),Vec3(0.4f,0.4f,0.4f),Vec3(0.5f,0.5f,0.5f));
+    dirLight=new DirLight(Vec3(-1.0f,-1.0f,-1.0f),Vec3(1.0f,1.0f,1.0f),Vec3(1.0f,1.0f,1.0f),Vec3(1.0f,1.0f,1.0f));
 
     //lightManager->addLight(SPOT_LIGHT,spotLight);
-    lightManager->addLight(POINT_LIGHT,light);
+    //lightManager->addLight(POINT_LIGHT,light);
     lightManager->addLight(DIR_LIGHT,dirLight);
     lightManager->bindShader(shader);
     glEnable(GL_DEPTH_TEST);
@@ -139,9 +140,9 @@ void initShader(){
 
 void display(){
     double time=glfwGetTime();
-    spotLight->setDirection(camera.front());
-    spotLight->setPosition(camera.position());
-    skybox->draw();
+//    spotLight->setDirection(camera.front());
+//    spotLight->setPosition(camera.position());
+    //skybox->draw();
     shader->Use();
     shader->setMat4(camera.getProjectionMatrix(),"projection");
     shader->setMat4(camera.getViewMatrix(),"view");
@@ -156,11 +157,12 @@ void display(){
     shader->setMat4(obj->getModelMatrix(),"model");
     obj->draw(*shader);
 
-    shader->setMat4(obj1->getModelMatrix(),"model");
-    obj1->draw(*shader);
+//    shader->setMat4(obj1->getModelMatrix(),"model");
+//    obj1->draw(*shader);
 
-    DrawLight(&camera);
-
+//    DrawLight(&camera);
+//    lightPos=Vec3(5*glm::cos(time),3,5*glm::sin(time));
+//    light->setPosition(lightPos);
 
 }
 
@@ -210,7 +212,7 @@ int main() {
         //事件检查
         glfwPollEvents();
         do_move();
-        glClearColor(0.8f,0.3f,0.2f,1.0f);
+        glClearColor(0.0f,0.0f,0.0f,1.0f);
         glClear(GL_COLOR_BUFFER_BIT|GL_DEPTH_BUFFER_BIT);
 
         display();

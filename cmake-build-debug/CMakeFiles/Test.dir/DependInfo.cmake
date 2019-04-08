@@ -4,17 +4,19 @@ set(CMAKE_DEPENDS_LANGUAGES
   )
 # The set of files for implicit dependencies of each language:
 set(CMAKE_DEPENDS_CHECK_CXX
-  "D:/learn/computer-graphic/StarAnim/Camera.cpp" "D:/learn/computer-graphic/StarAnim/cmake-build-debug/CMakeFiles/Test.dir/Camera.cpp.obj"
+  "D:/learn/computer-graphic/StarAnim/Camera/Camera.cpp" "D:/learn/computer-graphic/StarAnim/cmake-build-debug/CMakeFiles/Test.dir/Camera/Camera.cpp.obj"
   "D:/learn/computer-graphic/StarAnim/Light/DirLight.cpp" "D:/learn/computer-graphic/StarAnim/cmake-build-debug/CMakeFiles/Test.dir/Light/DirLight.cpp.obj"
   "D:/learn/computer-graphic/StarAnim/Light/Light.cpp" "D:/learn/computer-graphic/StarAnim/cmake-build-debug/CMakeFiles/Test.dir/Light/Light.cpp.obj"
   "D:/learn/computer-graphic/StarAnim/Light/PointLight.cpp" "D:/learn/computer-graphic/StarAnim/cmake-build-debug/CMakeFiles/Test.dir/Light/PointLight.cpp.obj"
   "D:/learn/computer-graphic/StarAnim/Light/SpotLight.cpp" "D:/learn/computer-graphic/StarAnim/cmake-build-debug/CMakeFiles/Test.dir/Light/SpotLight.cpp.obj"
   "D:/learn/computer-graphic/StarAnim/LightManager.cpp" "D:/learn/computer-graphic/StarAnim/cmake-build-debug/CMakeFiles/Test.dir/LightManager.cpp.obj"
-  "D:/learn/computer-graphic/StarAnim/Mesh.cpp" "D:/learn/computer-graphic/StarAnim/cmake-build-debug/CMakeFiles/Test.dir/Mesh.cpp.obj"
-  "D:/learn/computer-graphic/StarAnim/Model.cpp" "D:/learn/computer-graphic/StarAnim/cmake-build-debug/CMakeFiles/Test.dir/Model.cpp.obj"
+  "D:/learn/computer-graphic/StarAnim/Loader/ShaderLoader.cpp" "D:/learn/computer-graphic/StarAnim/cmake-build-debug/CMakeFiles/Test.dir/Loader/ShaderLoader.cpp.obj"
+  "D:/learn/computer-graphic/StarAnim/Loader/TextureLoader.cpp" "D:/learn/computer-graphic/StarAnim/cmake-build-debug/CMakeFiles/Test.dir/Loader/TextureLoader.cpp.obj"
+  "D:/learn/computer-graphic/StarAnim/Model/Mesh.cpp" "D:/learn/computer-graphic/StarAnim/cmake-build-debug/CMakeFiles/Test.dir/Model/Mesh.cpp.obj"
+  "D:/learn/computer-graphic/StarAnim/Model/Model.cpp" "D:/learn/computer-graphic/StarAnim/cmake-build-debug/CMakeFiles/Test.dir/Model/Model.cpp.obj"
+  "D:/learn/computer-graphic/StarAnim/Scene/BaseScene.cpp" "D:/learn/computer-graphic/StarAnim/cmake-build-debug/CMakeFiles/Test.dir/Scene/BaseScene.cpp.obj"
+  "D:/learn/computer-graphic/StarAnim/Scene/Flat.cpp" "D:/learn/computer-graphic/StarAnim/cmake-build-debug/CMakeFiles/Test.dir/Scene/Flat.cpp.obj"
   "D:/learn/computer-graphic/StarAnim/Scene/SkyBox.cpp" "D:/learn/computer-graphic/StarAnim/cmake-build-debug/CMakeFiles/Test.dir/Scene/SkyBox.cpp.obj"
-  "D:/learn/computer-graphic/StarAnim/ShaderLoader.cpp" "D:/learn/computer-graphic/StarAnim/cmake-build-debug/CMakeFiles/Test.dir/ShaderLoader.cpp.obj"
-  "D:/learn/computer-graphic/StarAnim/TextureLoader.cpp" "D:/learn/computer-graphic/StarAnim/cmake-build-debug/CMakeFiles/Test.dir/TextureLoader.cpp.obj"
   "D:/learn/computer-graphic/StarAnim/Timer.cpp" "D:/learn/computer-graphic/StarAnim/cmake-build-debug/CMakeFiles/Test.dir/Timer.cpp.obj"
   "D:/learn/computer-graphic/StarAnim/test.cpp" "D:/learn/computer-graphic/StarAnim/cmake-build-debug/CMakeFiles/Test.dir/test.cpp.obj"
   )
