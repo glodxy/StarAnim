@@ -22,15 +22,22 @@ public:
     virtual void draw()const;
 
     void setLineStrip(bool show);
-    void setMode(int mode);
 protected:
-    int _mode;
+    virtual void initVertices();
+    //是否显示线框
     bool _show;
+    //平面朝向
     FlatDirection _direction;
+    //平面大小
     Vec2 _size;
+    //网格间隔大小
+    float _blockSize;
 
 private:
-    inline void initVertices(float* vertices);
+    Shader* _wireFrameShader;
+    void initWireShader();
+    void initGroundShader();
+
 
 };
 

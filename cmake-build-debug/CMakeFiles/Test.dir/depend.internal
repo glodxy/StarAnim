@@ -59,6 +59,21 @@ CMakeFiles/Test.dir/Model/Model.cpp.obj
  D:/learn/computer-graphic/StarAnim/Model/Model.cpp
  D:/learn/computer-graphic/StarAnim/Model/Model.h
  D:/learn/computer-graphic/StarAnim/Transform.h
+CMakeFiles/Test.dir/Scene/BaseScene.cpp.obj
+ D:/learn/computer-graphic/StarAnim/Camera/Camera.h
+ D:/learn/computer-graphic/StarAnim/Loader/ShaderLoader.h
+ D:/learn/computer-graphic/StarAnim/Loader/TextureLoader.h
+ D:/learn/computer-graphic/StarAnim/Scene/BaseScene.cpp
+ D:/learn/computer-graphic/StarAnim/Scene/BaseScene.h
+ D:/learn/computer-graphic/StarAnim/Transform.h
+CMakeFiles/Test.dir/Scene/Flat.cpp.obj
+ D:/learn/computer-graphic/StarAnim/Camera/Camera.h
+ D:/learn/computer-graphic/StarAnim/Loader/ShaderLoader.h
+ D:/learn/computer-graphic/StarAnim/Loader/TextureLoader.h
+ D:/learn/computer-graphic/StarAnim/Scene/BaseScene.h
+ D:/learn/computer-graphic/StarAnim/Scene/Flat.cpp
+ D:/learn/computer-graphic/StarAnim/Scene/Flat.h
+ D:/learn/computer-graphic/StarAnim/Transform.h
 CMakeFiles/Test.dir/Scene/SkyBox.cpp.obj
  D:/learn/computer-graphic/StarAnim/Camera/Camera.h
  D:/learn/computer-graphic/StarAnim/Loader/ShaderLoader.h

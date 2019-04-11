@@ -67,10 +67,11 @@ public:
     void BindShader(Shader *shader);
     void BindCamera(Camera *camera);
 protected:
+    void copyIntoVertices(float* v,size_t size);
+    void setupVAO();
 
-    void setupVAO(float*vertices,size_t verticesSize);
-
-    String _directory;
+    static String _directory;
+    Vector<Vec3> _vertices;
     Vec3 _position;
     Shader *_shader;
     Camera* _camera;

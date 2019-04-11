@@ -142,7 +142,7 @@ void display(){
     double time=glfwGetTime();
 //    spotLight->setDirection(camera.front());
 //    spotLight->setPosition(camera.position());
-    //skybox->draw();
+    skybox->draw();
     shader->Use();
     shader->setMat4(camera.getProjectionMatrix(),"projection");
     shader->setMat4(camera.getViewMatrix(),"view");

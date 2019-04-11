@@ -59,6 +59,21 @@ CMakeFiles/Test.dir/Model/Model.cpp.obj: ../Model/Model.cpp
 CMakeFiles/Test.dir/Model/Model.cpp.obj: ../Model/Model.h
 CMakeFiles/Test.dir/Model/Model.cpp.obj: ../Transform.h
 
+CMakeFiles/Test.dir/Scene/BaseScene.cpp.obj: ../Camera/Camera.h
+CMakeFiles/Test.dir/Scene/BaseScene.cpp.obj: ../Loader/ShaderLoader.h
+CMakeFiles/Test.dir/Scene/BaseScene.cpp.obj: ../Loader/TextureLoader.h
+CMakeFiles/Test.dir/Scene/BaseScene.cpp.obj: ../Scene/BaseScene.cpp
+CMakeFiles/Test.dir/Scene/BaseScene.cpp.obj: ../Scene/BaseScene.h
+CMakeFiles/Test.dir/Scene/BaseScene.cpp.obj: ../Transform.h
+
+CMakeFiles/Test.dir/Scene/Flat.cpp.obj: ../Camera/Camera.h
+CMakeFiles/Test.dir/Scene/Flat.cpp.obj: ../Loader/ShaderLoader.h
+CMakeFiles/Test.dir/Scene/Flat.cpp.obj: ../Loader/TextureLoader.h
+CMakeFiles/Test.dir/Scene/Flat.cpp.obj: ../Scene/BaseScene.h
+CMakeFiles/Test.dir/Scene/Flat.cpp.obj: ../Scene/Flat.cpp
+CMakeFiles/Test.dir/Scene/Flat.cpp.obj: ../Scene/Flat.h
+CMakeFiles/Test.dir/Scene/Flat.cpp.obj: ../Transform.h
+
 CMakeFiles/Test.dir/Scene/SkyBox.cpp.obj: ../Camera/Camera.h
 CMakeFiles/Test.dir/Scene/SkyBox.cpp.obj: ../Loader/ShaderLoader.h
 CMakeFiles/Test.dir/Scene/SkyBox.cpp.obj: ../Loader/TextureLoader.h

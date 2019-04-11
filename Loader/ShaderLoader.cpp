@@ -66,7 +66,7 @@ GLuint createShader(GLenum shaderType,const char*fileName){
 }
 
 GLuint createShaderProgram(ShaderInfo* shader){
-    GLuint vertexShader,fragShader,shaderProgram;
+    GLuint vertexShader,fragShader,geoShader,shaderProgram;
     GLint success;
     GLchar infoLog[512];
     //顶点着色器装载
@@ -77,6 +77,10 @@ GLuint createShaderProgram(ShaderInfo* shader){
     shaderProgram=glCreateProgram();
     glAttachShader(shaderProgram,vertexShader);
     glAttachShader(shaderProgram,fragShader);
+    if(shader->geoShader!=NULL){
+        geoShader=createShader(GL_GEOMETRY_SHADER,shader->geoShader);
+        glAttachShader(shaderProgram,geoShader);
+    }
     glLinkProgram(shaderProgram);
     //链接结果检查
     glGetProgramiv(shaderProgram,GL_LINK_STATUS,&success);
@@ -88,6 +92,9 @@ GLuint createShaderProgram(ShaderInfo* shader){
     //删除着色器
     glDeleteShader(vertexShader);
     glDeleteShader(fragShader);
+    if(shader->geoShader!=NULL){
+        glDeleteShader(geoShader);
+    }
     return shaderProgram;
 }
 
@@ -96,8 +103,8 @@ Shader::Shader(ShaderInfo *si) {
     ProgramID=createShaderProgram(si);
 }
 
-Shader::Shader(const char *v, const char *f) {
-    ShaderInfo temp{v,f};
+Shader::Shader(const char *v, const char *f,const char*g) {
+    ShaderInfo temp{v,f,g};
     ProgramID=createShaderProgram(&temp);
 }
 

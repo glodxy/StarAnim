@@ -16,6 +16,7 @@ extern "C"{
     typedef struct {
         const char* vertexShader;
         const char* fragShader;
+        const char* geoShader=NULL;
     }ShaderInfo;
 
     class Shader{
@@ -23,7 +24,7 @@ extern "C"{
         GLuint ProgramID;
         Shader(){ProgramID=0;}
         explicit Shader(ShaderInfo*);
-        explicit Shader(const char*,const char*);
+        explicit Shader(const char*v,const char*f,const char*g=NULL);
         Shader&operator=(const Shader&s);
         void Use();
 

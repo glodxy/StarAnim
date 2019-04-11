@@ -5,7 +5,8 @@
 #include "SkyBox.h"
 SkyBox::SkyBox(const String &baseName,IMAGE_FORMAT format,const String&rootPath,size_t verticesSize,float* vertices):BaseScene(rootPath) {
     loadCubemap(baseName,format);
-    setupVAO(vertices,verticesSize);
+    copyIntoVertices(vertices,verticesSize);
+    setupVAO();
     String vs=_directory+"/shader/"+"skybox.vs";
     String fs=_directory+"/shader/"+"skybox.fs";
     _shader=new Shader(vs.c_str(),fs.c_str());

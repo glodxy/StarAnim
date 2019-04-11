@@ -82,6 +82,10 @@ D:/learn/computer-graphic/StarAnim/Model/Mesh.h
 ../Loader/TextureLoader.h
 D:/learn/computer-graphic/StarAnim/Loader/TextureLoader.h
 
+D:/learn/computer-graphic/StarAnim/Scene/BaseScene.cpp
+BaseScene.h
+D:/learn/computer-graphic/StarAnim/Scene/BaseScene.h
+
 D:/learn/computer-graphic/StarAnim/Scene/BaseScene.h
 ../Transform.h
 D:/learn/computer-graphic/StarAnim/Transform.h
@@ -91,6 +95,18 @@ D:/learn/computer-graphic/StarAnim/Loader/ShaderLoader.h
 D:/learn/computer-graphic/StarAnim/Loader/TextureLoader.h
 ../Camera/Camera.h
 D:/learn/computer-graphic/StarAnim/Camera/Camera.h
+
+D:/learn/computer-graphic/StarAnim/Scene/Flat.cpp
+Flat.h
+D:/learn/computer-graphic/StarAnim/Scene/Flat.h
+
+D:/learn/computer-graphic/StarAnim/Scene/Flat.h
+BaseScene.h
+D:/learn/computer-graphic/StarAnim/Scene/BaseScene.h
+
+D:/learn/computer-graphic/StarAnim/Scene/SkyBox.cpp
+SkyBox.h
+D:/learn/computer-graphic/StarAnim/Scene/SkyBox.h
 
 D:/learn/computer-graphic/StarAnim/Scene/SkyBox.h
 BaseScene.h
