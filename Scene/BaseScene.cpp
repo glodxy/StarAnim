@@ -4,7 +4,6 @@
 
 #include "BaseScene.h"
 
-String BaseScene::_directory="";
 
 BaseScene::BaseScene(const String & rootPath):_position(0,0,0){
     _camera=NULL;

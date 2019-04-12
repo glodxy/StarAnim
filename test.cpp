@@ -16,6 +16,7 @@
 #include "TestLight.h"
 #include "LightManager.h"
 #include "Scene/SkyBox.h"
+#include "Scene/Flat.h"
 
 LightManager* lightManager;
 int width,height;
@@ -32,6 +33,7 @@ bool clicked=false;
 Model *obj,*obj1;
 Model *scene0,*scene1,*scene2;
 SkyBox *skybox;
+Flat *flat;
 //static ShaderInfo si{
 //        "vertex",
 //        "test_fragment"
@@ -105,6 +107,10 @@ void initShader(){
     skybox=new SkyBox("blue",tga,"e:/project/Test/hw_blue");
     skybox->BindCamera(&camera);
 
+    flat=new Flat("d:/learn/computer-graphic/StarAnim");
+    flat->BindCamera(&camera);
+    flat->setLineStrip(true);
+
     //obj=new Model("E:/project/Test/inory/inory.pmx");
     //obj1=new Model("E:/project/Test/IA/IAx/IAx.pmx");
     //obj1=new Model("e:/project/Test/TDA Ice Cold Append Miku/TDA Ice Cold Append Miku.pmx");
@@ -143,6 +149,7 @@ void display(){
 //    spotLight->setDirection(camera.front());
 //    spotLight->setPosition(camera.position());
     skybox->draw();
+    flat->draw();
     shader->Use();
     shader->setMat4(camera.getProjectionMatrix(),"projection");
     shader->setMat4(camera.getViewMatrix(),"view");

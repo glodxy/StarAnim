@@ -1,15 +1,12 @@
-#version 330
+#version 330 core
 layout (location = 0) in vec3 position;
 
 uniform float xSize;
 uniform float ySize;
-uniform int direction;
+uniform mat4 model;
+uniform mat4 view;
+uniform mat4 projection;
 
 void main(){
-    mat4 model;
-    switch(direction){
-    case 0:{
-
-    }
-    }
+    gl_Position=projection*view*model*vec4(position,1.0f);
 }

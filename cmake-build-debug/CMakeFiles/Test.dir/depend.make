@@ -97,6 +97,7 @@ CMakeFiles/Test.dir/test.cpp.obj: ../Loader/TextureLoader.h
 CMakeFiles/Test.dir/test.cpp.obj: ../Model/Mesh.h
 CMakeFiles/Test.dir/test.cpp.obj: ../Model/Model.h
 CMakeFiles/Test.dir/test.cpp.obj: ../Scene/BaseScene.h
+CMakeFiles/Test.dir/test.cpp.obj: ../Scene/Flat.h
 CMakeFiles/Test.dir/test.cpp.obj: ../Scene/SkyBox.h
 CMakeFiles/Test.dir/test.cpp.obj: ../TestLight.h
 CMakeFiles/Test.dir/test.cpp.obj: ../Transform.h

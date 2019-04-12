@@ -8,16 +8,15 @@
 
 #include "BaseScene.h"
 
-enum FlatDirection{F_UP,F_FRONT,F_RIGHT};
 
 
 class Flat: public BaseScene{
 public:
-    Flat(const String &rootPath,FlatDirection direction=F_UP,float x=200,float y=200);
+    Flat(const String &rootPath,float x=10,float y=10);
     void setSize(Vec2 size);
     void setSize(float x,float y);
 
-    void setDirection(FlatDirection fd);
+    void bindCamera(Camera* camera);
 
     virtual void draw()const;
 
@@ -26,12 +25,12 @@ protected:
     virtual void initVertices();
     //是否显示线框
     bool _show;
-    //平面朝向
-    FlatDirection _direction;
-    //平面大小
+    //尺寸
     Vec2 _size;
-    //网格间隔大小
-    float _blockSize;
+
+    void setupWireVAO();
+    ID _WireVAO;
+    Vector<Vec3> _wireVertices;
 
 private:
     Shader* _wireFrameShader;

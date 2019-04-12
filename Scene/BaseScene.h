@@ -70,7 +70,7 @@ protected:
     void copyIntoVertices(float* v,size_t size);
     void setupVAO();
 
-    static String _directory;
+    String _directory;
     Vector<Vec3> _vertices;
     Vec3 _position;
     Shader *_shader;
