@@ -121,31 +121,31 @@ CMakeFiles/Test.dir/Timer.cpp.s: cmake_force
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Compiling CXX source to assembly CMakeFiles/Test.dir/Timer.cpp.s"
 	D:\Mingw\bin\g++.exe $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -S D:\learn\computer-graphic\StarAnim\Timer.cpp -o CMakeFiles\Test.dir\Timer.cpp.s
 
-CMakeFiles/Test.dir/Model/Mesh.cpp.obj: CMakeFiles/Test.dir/flags.make
-CMakeFiles/Test.dir/Model/Mesh.cpp.obj: ../Model/Mesh.cpp
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=D:\learn\computer-graphic\StarAnim\cmake-build-debug\CMakeFiles --progress-num=$(CMAKE_PROGRESS_6) "Building CXX object CMakeFiles/Test.dir/Model/Mesh.cpp.obj"
-	D:\Mingw\bin\g++.exe  $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -o CMakeFiles\Test.dir\Model\Mesh.cpp.obj -c D:\learn\computer-graphic\StarAnim\Model\Mesh.cpp
+CMakeFiles/Test.dir/Object/Model/Mesh.cpp.obj: CMakeFiles/Test.dir/flags.make
+CMakeFiles/Test.dir/Object/Model/Mesh.cpp.obj: ../Object/Model/Mesh.cpp
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=D:\learn\computer-graphic\StarAnim\cmake-build-debug\CMakeFiles --progress-num=$(CMAKE_PROGRESS_6) "Building CXX object CMakeFiles/Test.dir/Object/Model/Mesh.cpp.obj"
+	D:\Mingw\bin\g++.exe  $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -o CMakeFiles\Test.dir\Object\Model\Mesh.cpp.obj -c D:\learn\computer-graphic\StarAnim\Object\Model\Mesh.cpp
 
-CMakeFiles/Test.dir/Model/Mesh.cpp.i: cmake_force
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Preprocessing CXX source to CMakeFiles/Test.dir/Model/Mesh.cpp.i"
-	D:\Mingw\bin\g++.exe $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -E D:\learn\computer-graphic\StarAnim\Model\Mesh.cpp > CMakeFiles\Test.dir\Model\Mesh.cpp.i
+CMakeFiles/Test.dir/Object/Model/Mesh.cpp.i: cmake_force
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Preprocessing CXX source to CMakeFiles/Test.dir/Object/Model/Mesh.cpp.i"
+	D:\Mingw\bin\g++.exe $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -E D:\learn\computer-graphic\StarAnim\Object\Model\Mesh.cpp > CMakeFiles\Test.dir\Object\Model\Mesh.cpp.i
 
-CMakeFiles/Test.dir/Model/Mesh.cpp.s: cmake_force
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Compiling CXX source to assembly CMakeFiles/Test.dir/Model/Mesh.cpp.s"
-	D:\Mingw\bin\g++.exe $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -S D:\learn\computer-graphic\StarAnim\Model\Mesh.cpp -o CMakeFiles\Test.dir\Model\Mesh.cpp.s
+CMakeFiles/Test.dir/Object/Model/Mesh.cpp.s: cmake_force
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Compiling CXX source to assembly CMakeFiles/Test.dir/Object/Model/Mesh.cpp.s"
+	D:\Mingw\bin\g++.exe $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -S D:\learn\computer-graphic\StarAnim\Object\Model\Mesh.cpp -o CMakeFiles\Test.dir\Object\Model\Mesh.cpp.s
 
-CMakeFiles/Test.dir/Model/Model.cpp.obj: CMakeFiles/Test.dir/flags.make
-CMakeFiles/Test.dir/Model/Model.cpp.obj: ../Model/Model.cpp
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=D:\learn\computer-graphic\StarAnim\cmake-build-debug\CMakeFiles --progress-num=$(CMAKE_PROGRESS_7) "Building CXX object CMakeFiles/Test.dir/Model/Model.cpp.obj"
-	D:\Mingw\bin\g++.exe  $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -o CMakeFiles\Test.dir\Model\Model.cpp.obj -c D:\learn\computer-graphic\StarAnim\Model\Model.cpp
+CMakeFiles/Test.dir/Object/Model/Model.cpp.obj: CMakeFiles/Test.dir/flags.make
+CMakeFiles/Test.dir/Object/Model/Model.cpp.obj: ../Object/Model/Model.cpp
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=D:\learn\computer-graphic\StarAnim\cmake-build-debug\CMakeFiles --progress-num=$(CMAKE_PROGRESS_7) "Building CXX object CMakeFiles/Test.dir/Object/Model/Model.cpp.obj"
+	D:\Mingw\bin\g++.exe  $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -o CMakeFiles\Test.dir\Object\Model\Model.cpp.obj -c D:\learn\computer-graphic\StarAnim\Object\Model\Model.cpp
 
-CMakeFiles/Test.dir/Model/Model.cpp.i: cmake_force
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Preprocessing CXX source to CMakeFiles/Test.dir/Model/Model.cpp.i"
-	D:\Mingw\bin\g++.exe $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -E D:\learn\computer-graphic\StarAnim\Model\Model.cpp > CMakeFiles\Test.dir\Model\Model.cpp.i
+CMakeFiles/Test.dir/Object/Model/Model.cpp.i: cmake_force
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Preprocessing CXX source to CMakeFiles/Test.dir/Object/Model/Model.cpp.i"
+	D:\Mingw\bin\g++.exe $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -E D:\learn\computer-graphic\StarAnim\Object\Model\Model.cpp > CMakeFiles\Test.dir\Object\Model\Model.cpp.i
 
-CMakeFiles/Test.dir/Model/Model.cpp.s: cmake_force
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Compiling CXX source to assembly CMakeFiles/Test.dir/Model/Model.cpp.s"
-	D:\Mingw\bin\g++.exe $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -S D:\learn\computer-graphic\StarAnim\Model\Model.cpp -o CMakeFiles\Test.dir\Model\Model.cpp.s
+CMakeFiles/Test.dir/Object/Model/Model.cpp.s: cmake_force
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Compiling CXX source to assembly CMakeFiles/Test.dir/Object/Model/Model.cpp.s"
+	D:\Mingw\bin\g++.exe $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -S D:\learn\computer-graphic\StarAnim\Object\Model\Model.cpp -o CMakeFiles\Test.dir\Object\Model\Model.cpp.s
 
 CMakeFiles/Test.dir/Light/Light.cpp.obj: CMakeFiles/Test.dir/flags.make
 CMakeFiles/Test.dir/Light/Light.cpp.obj: ../Light/Light.cpp
@@ -212,44 +212,57 @@ CMakeFiles/Test.dir/LightManager.cpp.s: cmake_force
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Compiling CXX source to assembly CMakeFiles/Test.dir/LightManager.cpp.s"
 	D:\Mingw\bin\g++.exe $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -S D:\learn\computer-graphic\StarAnim\LightManager.cpp -o CMakeFiles\Test.dir\LightManager.cpp.s
 
-CMakeFiles/Test.dir/Scene/SkyBox.cpp.obj: CMakeFiles/Test.dir/flags.make
-CMakeFiles/Test.dir/Scene/SkyBox.cpp.obj: ../Scene/SkyBox.cpp
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=D:\learn\computer-graphic\StarAnim\cmake-build-debug\CMakeFiles --progress-num=$(CMAKE_PROGRESS_13) "Building CXX object CMakeFiles/Test.dir/Scene/SkyBox.cpp.obj"
-	D:\Mingw\bin\g++.exe  $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -o CMakeFiles\Test.dir\Scene\SkyBox.cpp.obj -c D:\learn\computer-graphic\StarAnim\Scene\SkyBox.cpp
+CMakeFiles/Test.dir/Object/Scene/SkyBox.cpp.obj: CMakeFiles/Test.dir/flags.make
+CMakeFiles/Test.dir/Object/Scene/SkyBox.cpp.obj: ../Object/Scene/SkyBox.cpp
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=D:\learn\computer-graphic\StarAnim\cmake-build-debug\CMakeFiles --progress-num=$(CMAKE_PROGRESS_13) "Building CXX object CMakeFiles/Test.dir/Object/Scene/SkyBox.cpp.obj"
+	D:\Mingw\bin\g++.exe  $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -o CMakeFiles\Test.dir\Object\Scene\SkyBox.cpp.obj -c D:\learn\computer-graphic\StarAnim\Object\Scene\SkyBox.cpp
 
-CMakeFiles/Test.dir/Scene/SkyBox.cpp.i: cmake_force
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Preprocessing CXX source to CMakeFiles/Test.dir/Scene/SkyBox.cpp.i"
-	D:\Mingw\bin\g++.exe $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -E D:\learn\computer-graphic\StarAnim\Scene\SkyBox.cpp > CMakeFiles\Test.dir\Scene\SkyBox.cpp.i
+CMakeFiles/Test.dir/Object/Scene/SkyBox.cpp.i: cmake_force
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Preprocessing CXX source to CMakeFiles/Test.dir/Object/Scene/SkyBox.cpp.i"
+	D:\Mingw\bin\g++.exe $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -E D:\learn\computer-graphic\StarAnim\Object\Scene\SkyBox.cpp > CMakeFiles\Test.dir\Object\Scene\SkyBox.cpp.i
 
-CMakeFiles/Test.dir/Scene/SkyBox.cpp.s: cmake_force
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Compiling CXX source to assembly CMakeFiles/Test.dir/Scene/SkyBox.cpp.s"
-	D:\Mingw\bin\g++.exe $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -S D:\learn\computer-graphic\StarAnim\Scene\SkyBox.cpp -o CMakeFiles\Test.dir\Scene\SkyBox.cpp.s
+CMakeFiles/Test.dir/Object/Scene/SkyBox.cpp.s: cmake_force
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Compiling CXX source to assembly CMakeFiles/Test.dir/Object/Scene/SkyBox.cpp.s"
+	D:\Mingw\bin\g++.exe $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -S D:\learn\computer-graphic\StarAnim\Object\Scene\SkyBox.cpp -o CMakeFiles\Test.dir\Object\Scene\SkyBox.cpp.s
 
-CMakeFiles/Test.dir/Scene/Flat.cpp.obj: CMakeFiles/Test.dir/flags.make
-CMakeFiles/Test.dir/Scene/Flat.cpp.obj: ../Scene/Flat.cpp
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=D:\learn\computer-graphic\StarAnim\cmake-build-debug\CMakeFiles --progress-num=$(CMAKE_PROGRESS_14) "Building CXX object CMakeFiles/Test.dir/Scene/Flat.cpp.obj"
-	D:\Mingw\bin\g++.exe  $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -o CMakeFiles\Test.dir\Scene\Flat.cpp.obj -c D:\learn\computer-graphic\StarAnim\Scene\Flat.cpp
+CMakeFiles/Test.dir/Object/Scene/Flat.cpp.obj: CMakeFiles/Test.dir/flags.make
+CMakeFiles/Test.dir/Object/Scene/Flat.cpp.obj: ../Object/Scene/Flat.cpp
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=D:\learn\computer-graphic\StarAnim\cmake-build-debug\CMakeFiles --progress-num=$(CMAKE_PROGRESS_14) "Building CXX object CMakeFiles/Test.dir/Object/Scene/Flat.cpp.obj"
+	D:\Mingw\bin\g++.exe  $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -o CMakeFiles\Test.dir\Object\Scene\Flat.cpp.obj -c D:\learn\computer-graphic\StarAnim\Object\Scene\Flat.cpp
 
-CMakeFiles/Test.dir/Scene/Flat.cpp.i: cmake_force
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Preprocessing CXX source to CMakeFiles/Test.dir/Scene/Flat.cpp.i"
-	D:\Mingw\bin\g++.exe $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -E D:\learn\computer-graphic\StarAnim\Scene\Flat.cpp > CMakeFiles\Test.dir\Scene\Flat.cpp.i
+CMakeFiles/Test.dir/Object/Scene/Flat.cpp.i: cmake_force
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Preprocessing CXX source to CMakeFiles/Test.dir/Object/Scene/Flat.cpp.i"
+	D:\Mingw\bin\g++.exe $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -E D:\learn\computer-graphic\StarAnim\Object\Scene\Flat.cpp > CMakeFiles\Test.dir\Object\Scene\Flat.cpp.i
 
-CMakeFiles/Test.dir/Scene/Flat.cpp.s: cmake_force
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Compiling CXX source to assembly CMakeFiles/Test.dir/Scene/Flat.cpp.s"
-	D:\Mingw\bin\g++.exe $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -S D:\learn\computer-graphic\StarAnim\Scene\Flat.cpp -o CMakeFiles\Test.dir\Scene\Flat.cpp.s
+CMakeFiles/Test.dir/Object/Scene/Flat.cpp.s: cmake_force
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Compiling CXX source to assembly CMakeFiles/Test.dir/Object/Scene/Flat.cpp.s"
+	D:\Mingw\bin\g++.exe $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -S D:\learn\computer-graphic\StarAnim\Object\Scene\Flat.cpp -o CMakeFiles\Test.dir\Object\Scene\Flat.cpp.s
 
-CMakeFiles/Test.dir/Scene/BaseScene.cpp.obj: CMakeFiles/Test.dir/flags.make
-CMakeFiles/Test.dir/Scene/BaseScene.cpp.obj: ../Scene/BaseScene.cpp
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=D:\learn\computer-graphic\StarAnim\cmake-build-debug\CMakeFiles --progress-num=$(CMAKE_PROGRESS_15) "Building CXX object CMakeFiles/Test.dir/Scene/BaseScene.cpp.obj"
-	D:\Mingw\bin\g++.exe  $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -o CMakeFiles\Test.dir\Scene\BaseScene.cpp.obj -c D:\learn\computer-graphic\StarAnim\Scene\BaseScene.cpp
+CMakeFiles/Test.dir/Object/Scene/BaseScene.cpp.obj: CMakeFiles/Test.dir/flags.make
+CMakeFiles/Test.dir/Object/Scene/BaseScene.cpp.obj: ../Object/Scene/BaseScene.cpp
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=D:\learn\computer-graphic\StarAnim\cmake-build-debug\CMakeFiles --progress-num=$(CMAKE_PROGRESS_15) "Building CXX object CMakeFiles/Test.dir/Object/Scene/BaseScene.cpp.obj"
+	D:\Mingw\bin\g++.exe  $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -o CMakeFiles\Test.dir\Object\Scene\BaseScene.cpp.obj -c D:\learn\computer-graphic\StarAnim\Object\Scene\BaseScene.cpp
 
-CMakeFiles/Test.dir/Scene/BaseScene.cpp.i: cmake_force
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Preprocessing CXX source to CMakeFiles/Test.dir/Scene/BaseScene.cpp.i"
-	D:\Mingw\bin\g++.exe $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -E D:\learn\computer-graphic\StarAnim\Scene\BaseScene.cpp > CMakeFiles\Test.dir\Scene\BaseScene.cpp.i
+CMakeFiles/Test.dir/Object/Scene/BaseScene.cpp.i: cmake_force
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Preprocessing CXX source to CMakeFiles/Test.dir/Object/Scene/BaseScene.cpp.i"
+	D:\Mingw\bin\g++.exe $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -E D:\learn\computer-graphic\StarAnim\Object\Scene\BaseScene.cpp > CMakeFiles\Test.dir\Object\Scene\BaseScene.cpp.i
 
-CMakeFiles/Test.dir/Scene/BaseScene.cpp.s: cmake_force
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Compiling CXX source to assembly CMakeFiles/Test.dir/Scene/BaseScene.cpp.s"
-	D:\Mingw\bin\g++.exe $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -S D:\learn\computer-graphic\StarAnim\Scene\BaseScene.cpp -o CMakeFiles\Test.dir\Scene\BaseScene.cpp.s
+CMakeFiles/Test.dir/Object/Scene/BaseScene.cpp.s: cmake_force
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Compiling CXX source to assembly CMakeFiles/Test.dir/Object/Scene/BaseScene.cpp.s"
+	D:\Mingw\bin\g++.exe $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -S D:\learn\computer-graphic\StarAnim\Object\Scene\BaseScene.cpp -o CMakeFiles\Test.dir\Object\Scene\BaseScene.cpp.s
+
+CMakeFiles/Test.dir/RenderManager.cpp.obj: CMakeFiles/Test.dir/flags.make
+CMakeFiles/Test.dir/RenderManager.cpp.obj: ../RenderManager.cpp
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=D:\learn\computer-graphic\StarAnim\cmake-build-debug\CMakeFiles --progress-num=$(CMAKE_PROGRESS_16) "Building CXX object CMakeFiles/Test.dir/RenderManager.cpp.obj"
+	D:\Mingw\bin\g++.exe  $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -o CMakeFiles\Test.dir\RenderManager.cpp.obj -c D:\learn\computer-graphic\StarAnim\RenderManager.cpp
+
+CMakeFiles/Test.dir/RenderManager.cpp.i: cmake_force
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Preprocessing CXX source to CMakeFiles/Test.dir/RenderManager.cpp.i"
+	D:\Mingw\bin\g++.exe $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -E D:\learn\computer-graphic\StarAnim\RenderManager.cpp > CMakeFiles\Test.dir\RenderManager.cpp.i
+
+CMakeFiles/Test.dir/RenderManager.cpp.s: cmake_force
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Compiling CXX source to assembly CMakeFiles/Test.dir/RenderManager.cpp.s"
+	D:\Mingw\bin\g++.exe $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -S D:\learn\computer-graphic\StarAnim\RenderManager.cpp -o CMakeFiles\Test.dir\RenderManager.cpp.s
 
 # Object files for target Test
 Test_OBJECTS = \
@@ -258,16 +271,17 @@ Test_OBJECTS = \
 "CMakeFiles/Test.dir/Loader/TextureLoader.cpp.obj" \
 "CMakeFiles/Test.dir/Camera/Camera.cpp.obj" \
 "CMakeFiles/Test.dir/Timer.cpp.obj" \
-"CMakeFiles/Test.dir/Model/Mesh.cpp.obj" \
-"CMakeFiles/Test.dir/Model/Model.cpp.obj" \
+"CMakeFiles/Test.dir/Object/Model/Mesh.cpp.obj" \
+"CMakeFiles/Test.dir/Object/Model/Model.cpp.obj" \
 "CMakeFiles/Test.dir/Light/Light.cpp.obj" \
 "CMakeFiles/Test.dir/Light/PointLight.cpp.obj" \
 "CMakeFiles/Test.dir/Light/SpotLight.cpp.obj" \
 "CMakeFiles/Test.dir/Light/DirLight.cpp.obj" \
 "CMakeFiles/Test.dir/LightManager.cpp.obj" \
-"CMakeFiles/Test.dir/Scene/SkyBox.cpp.obj" \
-"CMakeFiles/Test.dir/Scene/Flat.cpp.obj" \
-"CMakeFiles/Test.dir/Scene/BaseScene.cpp.obj"
+"CMakeFiles/Test.dir/Object/Scene/SkyBox.cpp.obj" \
+"CMakeFiles/Test.dir/Object/Scene/Flat.cpp.obj" \
+"CMakeFiles/Test.dir/Object/Scene/BaseScene.cpp.obj" \
+"CMakeFiles/Test.dir/RenderManager.cpp.obj"
 
 # External object files for target Test
 Test_EXTERNAL_OBJECTS =
@@ -277,21 +291,22 @@ E:/project/Test/Test.exe: CMakeFiles/Test.dir/Loader/ShaderLoader.cpp.obj
 E:/project/Test/Test.exe: CMakeFiles/Test.dir/Loader/TextureLoader.cpp.obj
 E:/project/Test/Test.exe: CMakeFiles/Test.dir/Camera/Camera.cpp.obj
 E:/project/Test/Test.exe: CMakeFiles/Test.dir/Timer.cpp.obj
-E:/project/Test/Test.exe: CMakeFiles/Test.dir/Model/Mesh.cpp.obj
-E:/project/Test/Test.exe: CMakeFiles/Test.dir/Model/Model.cpp.obj
+E:/project/Test/Test.exe: CMakeFiles/Test.dir/Object/Model/Mesh.cpp.obj
+E:/project/Test/Test.exe: CMakeFiles/Test.dir/Object/Model/Model.cpp.obj
 E:/project/Test/Test.exe: CMakeFiles/Test.dir/Light/Light.cpp.obj
 E:/project/Test/Test.exe: CMakeFiles/Test.dir/Light/PointLight.cpp.obj
 E:/project/Test/Test.exe: CMakeFiles/Test.dir/Light/SpotLight.cpp.obj
 E:/project/Test/Test.exe: CMakeFiles/Test.dir/Light/DirLight.cpp.obj
 E:/project/Test/Test.exe: CMakeFiles/Test.dir/LightManager.cpp.obj
-E:/project/Test/Test.exe: CMakeFiles/Test.dir/Scene/SkyBox.cpp.obj
-E:/project/Test/Test.exe: CMakeFiles/Test.dir/Scene/Flat.cpp.obj
-E:/project/Test/Test.exe: CMakeFiles/Test.dir/Scene/BaseScene.cpp.obj
+E:/project/Test/Test.exe: CMakeFiles/Test.dir/Object/Scene/SkyBox.cpp.obj
+E:/project/Test/Test.exe: CMakeFiles/Test.dir/Object/Scene/Flat.cpp.obj
+E:/project/Test/Test.exe: CMakeFiles/Test.dir/Object/Scene/BaseScene.cpp.obj
+E:/project/Test/Test.exe: CMakeFiles/Test.dir/RenderManager.cpp.obj
 E:/project/Test/Test.exe: CMakeFiles/Test.dir/build.make
 E:/project/Test/Test.exe: CMakeFiles/Test.dir/linklibs.rsp
 E:/project/Test/Test.exe: CMakeFiles/Test.dir/objects1.rsp
 E:/project/Test/Test.exe: CMakeFiles/Test.dir/link.txt
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --bold --progress-dir=D:\learn\computer-graphic\StarAnim\cmake-build-debug\CMakeFiles --progress-num=$(CMAKE_PROGRESS_16) "Linking CXX executable E:\project\Test\Test.exe"
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --bold --progress-dir=D:\learn\computer-graphic\StarAnim\cmake-build-debug\CMakeFiles --progress-num=$(CMAKE_PROGRESS_17) "Linking CXX executable E:\project\Test\Test.exe"
 	$(CMAKE_COMMAND) -E cmake_link_script CMakeFiles\Test.dir\link.txt --verbose=$(VERBOSE)
 
 # Rule to build all files generated by this target.

@@ -11,14 +11,13 @@
 #include "Loader/TextureLoader.h"
 #include "Transform.h"
 #include "Camera/Camera.h"
-#include "Model/Model.h"
 #include "Loader/ShaderLoader.h"
 #include "TestLight.h"
 #include "LightManager.h"
-#include "Scene/SkyBox.h"
-#include "Scene/Flat.h"
+#include "RenderManager.h"
 
 LightManager* lightManager;
+RenderManager* renderManager;
 int width,height;
 Shader *shader;
 Camera camera;
@@ -31,7 +30,6 @@ bool firstMouse=true;
 bool keys[1024];
 bool clicked=false;
 Model *obj,*obj1;
-Model *scene0,*scene1,*scene2;
 SkyBox *skybox;
 Flat *flat;
 //static ShaderInfo si{
@@ -95,21 +93,21 @@ void do_move(){
 //初始化顶点数据，纹理数据以及着色器
 void initShader(){
     lightManager=LightManager::getLightManager();
+    renderManager=RenderManager::getRenderManager();
     ls=new Shader("Vertex","light");
     shader=new Shader("Vertex","test_fragment");
     shader->setBool(true,"blinn");
     camera=Camera(glm::vec3(0.0f,0.0f,3.0f));
 
-    scene0=new Model("e:/project/Test/scene/rainbow.x");
-    scene1=new Model("e:/project/Test/scene/bg.x");
-    scene2=new Model("e:/project/Test/scene/bg2.x");
 
-    skybox=new SkyBox("blue",tga,"e:/project/Test/hw_blue");
-    skybox->BindCamera(&camera);
+//    skybox=new SkyBox("blue",tga,"e:/project/Test/hw_blue");
+//    skybox->BindCamera(&camera);
 
     flat=new Flat("d:/learn/computer-graphic/StarAnim");
     flat->BindCamera(&camera);
     flat->setLineStrip(true);
+    flat->BindShader(shader);
+    renderManager->addScene("floor",flat);
 
     //obj=new Model("E:/project/Test/inory/inory.pmx");
     //obj1=new Model("E:/project/Test/IA/IAx/IAx.pmx");
@@ -117,6 +115,8 @@ void initShader(){
     obj=new Model("e:/project/Test/Tda China Dress Stardust Canary/Tda China Dress Stardust Canary.pmx");
     obj->setPosition(0.0f,0.0f,0.0f);
     obj->scaleTo(0.2f,0.2f,0.2f);
+    obj->BindShader(shader);
+    renderManager->addModel("stardust",obj);
 //    obj1->setPosition(10.0f,5.0f,0.0f);
 //    obj1->scaleTo(0.1f,0.1f,0.1f);
     InitLight();
@@ -148,8 +148,7 @@ void display(){
     double time=glfwGetTime();
 //    spotLight->setDirection(camera.front());
 //    spotLight->setPosition(camera.position());
-    skybox->draw();
-    flat->draw();
+    //
     shader->Use();
     shader->setMat4(camera.getProjectionMatrix(),"projection");
     shader->setMat4(camera.getViewMatrix(),"view");
@@ -161,8 +160,7 @@ void display(){
     //scene2->draw(*shader);
 
 
-    shader->setMat4(obj->getModelMatrix(),"model");
-    obj->draw(*shader);
+    renderManager->draw();
 
 //    shader->setMat4(obj1->getModelMatrix(),"model");
 //    obj1->draw(*shader);

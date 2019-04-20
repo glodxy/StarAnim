@@ -133,37 +133,52 @@
 		<Unit filename="D:/learn/computer-graphic/StarAnim/Loader/TextureLoader.h">
 			<Option target="Test"/>
 		</Unit>
-		<Unit filename="D:/learn/computer-graphic/StarAnim/Model/Mesh.cpp">
-			<Option target="Test"/>
-		</Unit>
-		<Unit filename="D:/learn/computer-graphic/StarAnim/Model/Mesh.h">
-			<Option target="Test"/>
-		</Unit>
-		<Unit filename="D:/learn/computer-graphic/StarAnim/Model/Model.cpp">
-			<Option target="Test"/>
-		</Unit>
-		<Unit filename="D:/learn/computer-graphic/StarAnim/Model/Model.h">
-			<Option target="Test"/>
-		</Unit>
 		<Unit filename="D:/learn/computer-graphic/StarAnim/Object.h">
 			<Option target="Test"/>
 		</Unit>
-		<Unit filename="D:/learn/computer-graphic/StarAnim/Scene/BaseScene.cpp">
+		<Unit filename="D:/learn/computer-graphic/StarAnim/Object/Model/Mesh.cpp">
 			<Option target="Test"/>
 		</Unit>
-		<Unit filename="D:/learn/computer-graphic/StarAnim/Scene/BaseScene.h">
+		<Unit filename="D:/learn/computer-graphic/StarAnim/Object/Model/Mesh.h">
 			<Option target="Test"/>
 		</Unit>
-		<Unit filename="D:/learn/computer-graphic/StarAnim/Scene/Flat.cpp">
+		<Unit filename="D:/learn/computer-graphic/StarAnim/Object/Model/Model.cpp">
 			<Option target="Test"/>
 		</Unit>
-		<Unit filename="D:/learn/computer-graphic/StarAnim/Scene/Flat.h">
+		<Unit filename="D:/learn/computer-graphic/StarAnim/Object/Model/Model.h">
 			<Option target="Test"/>
 		</Unit>
-		<Unit filename="D:/learn/computer-graphic/StarAnim/Scene/SkyBox.cpp">
+		<Unit filename="D:/learn/computer-graphic/StarAnim/Object/Model/Model_include.h">
 			<Option target="Test"/>
 		</Unit>
-		<Unit filename="D:/learn/computer-graphic/StarAnim/Scene/SkyBox.h">
+		<Unit filename="D:/learn/computer-graphic/StarAnim/Object/Object_include.h">
+			<Option target="Test"/>
+		</Unit>
+		<Unit filename="D:/learn/computer-graphic/StarAnim/Object/Scene/BaseScene.cpp">
+			<Option target="Test"/>
+		</Unit>
+		<Unit filename="D:/learn/computer-graphic/StarAnim/Object/Scene/BaseScene.h">
+			<Option target="Test"/>
+		</Unit>
+		<Unit filename="D:/learn/computer-graphic/StarAnim/Object/Scene/Flat.cpp">
+			<Option target="Test"/>
+		</Unit>
+		<Unit filename="D:/learn/computer-graphic/StarAnim/Object/Scene/Flat.h">
+			<Option target="Test"/>
+		</Unit>
+		<Unit filename="D:/learn/computer-graphic/StarAnim/Object/Scene/Scene_include.h">
+			<Option target="Test"/>
+		</Unit>
+		<Unit filename="D:/learn/computer-graphic/StarAnim/Object/Scene/SkyBox.cpp">
+			<Option target="Test"/>
+		</Unit>
+		<Unit filename="D:/learn/computer-graphic/StarAnim/Object/Scene/SkyBox.h">
+			<Option target="Test"/>
+		</Unit>
+		<Unit filename="D:/learn/computer-graphic/StarAnim/RenderManager.cpp">
+			<Option target="Test"/>
+		</Unit>
+		<Unit filename="D:/learn/computer-graphic/StarAnim/RenderManager.h">
 			<Option target="Test"/>
 		</Unit>
 		<Unit filename="D:/learn/computer-graphic/StarAnim/TestLight.h">

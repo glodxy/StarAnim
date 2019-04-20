@@ -11,6 +11,7 @@
 #include <glm/gtc/type_ptr.hpp>
 #include <string>
 #include <vector>
+#include <map>
 #include <iostream>
 
 
@@ -26,6 +27,12 @@ typedef std::string String;
 
 template <class T>
 using Vector=std::vector<T>;
+
+template <class T>
+using Map=std::map<String,T>;
+
+template <class T>
+using Pair=std::pair<String,T>;
 
 typedef unsigned int ID;
 typedef unsigned int Index;
