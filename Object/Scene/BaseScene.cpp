@@ -5,18 +5,8 @@
 #include "BaseScene.h"
 
 
-BaseScene::BaseScene(const String & rootPath):_position(0,0,0){
+BaseScene::BaseScene(const String & rootPath):BaseObject(rootPath){
     _camera=NULL;
-    _shader=NULL;
-    _directory=rootPath;
-}
-
-void BaseScene::setPosition(const Vec3& position){
-    _position=position;
-}
-
-void BaseScene::BindShader(Shader *shader){
-    _shader=shader;
 }
 
 void BaseScene::BindCamera(Camera *camera){

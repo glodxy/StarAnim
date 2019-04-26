@@ -15,6 +15,7 @@ file(REMOVE_RECURSE
   "CMakeFiles/Test.dir/Object/Scene/Flat.cpp.obj"
   "CMakeFiles/Test.dir/Object/Scene/BaseScene.cpp.obj"
   "CMakeFiles/Test.dir/RenderManager.cpp.obj"
+  "CMakeFiles/Test.dir/ShaderManager.cpp.obj"
   "E:/project/Test/Test.pdb"
   "E:/project/Test/Test.exe"
   "E:/project/Test/Test.exe.manifest"

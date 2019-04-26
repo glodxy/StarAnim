@@ -500,6 +500,33 @@ RenderManager.cpp.s:
 	$(MAKE) -f CMakeFiles\Test.dir\build.make CMakeFiles/Test.dir/RenderManager.cpp.s
 .PHONY : RenderManager.cpp.s
 
+ShaderManager.obj: ShaderManager.cpp.obj
+
+.PHONY : ShaderManager.obj
+
+# target to build an object file
+ShaderManager.cpp.obj:
+	$(MAKE) -f CMakeFiles\Test.dir\build.make CMakeFiles/Test.dir/ShaderManager.cpp.obj
+.PHONY : ShaderManager.cpp.obj
+
+ShaderManager.i: ShaderManager.cpp.i
+
+.PHONY : ShaderManager.i
+
+# target to preprocess a source file
+ShaderManager.cpp.i:
+	$(MAKE) -f CMakeFiles\Test.dir\build.make CMakeFiles/Test.dir/ShaderManager.cpp.i
+.PHONY : ShaderManager.cpp.i
+
+ShaderManager.s: ShaderManager.cpp.s
+
+.PHONY : ShaderManager.s
+
+# target to generate assembly for a file
+ShaderManager.cpp.s:
+	$(MAKE) -f CMakeFiles\Test.dir\build.make CMakeFiles/Test.dir/ShaderManager.cpp.s
+.PHONY : ShaderManager.cpp.s
+
 Timer.obj: Timer.cpp.obj
 
 .PHONY : Timer.obj
@@ -605,6 +632,9 @@ help:
 	@echo ... RenderManager.obj
 	@echo ... RenderManager.i
 	@echo ... RenderManager.s
+	@echo ... ShaderManager.obj
+	@echo ... ShaderManager.i
+	@echo ... ShaderManager.s
 	@echo ... Timer.obj
 	@echo ... Timer.i
 	@echo ... Timer.s

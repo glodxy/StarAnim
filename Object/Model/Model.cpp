@@ -4,11 +4,9 @@
 
 #include "Model.h"
 
-Model::Model(const String &filePath) {
-    _shader=NULL;
+Model::Model(const String &filePath):BaseObject(filePath){
     loadModel(filePath);
     _scale=Vec3(1.0,1.0,1.0);
-    _position=Vec3(0,0,0);
     _rotation=Quat(1,0,0,0);
 }
 
@@ -172,9 +170,6 @@ void Model::setPosition(float x, float y, float z) {
     _position.z=z;
 }
 
-void Model::setPosition(const Vec3&position) {
-    _position=position;
-}
 
 void Model::scaleTo(float xs, float ys, float zs) {
     _scale.x=xs;
@@ -187,9 +182,7 @@ void Model::rotate(float pitch, float yaw, float roll) {
     _rotation=_rotation*temp;
 }
 
-void Model::BindShader(Shader *shader) {
-    _shader=shader;
-}
+
 
 Mat4 Model::getModelMatrix() const {
     Mat4 result(1.0f);

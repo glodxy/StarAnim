@@ -70,6 +70,25 @@ void RenderManager::setScene(const String &name, BaseScene *scene) {
     iter->second=scene;
 }
 
+void RenderManager::init() const {
+    GLuint frameBuffer,frameMap;
+   glGenFramebuffers(1,&frameBuffer);
+   const GLuint width=1024,height=1024;
+   glGenTextures(1,&frameMap);
+   glBindTexture(GL_TEXTURE_2D,frameMap);
+   glTexImage2D(GL_TEXTURE_2D,0,GL_DEPTH_COMPONENT,width,height,0,GL_DEPTH_COMPONENT,GL_FLOAT,NULL);
+   glTexParameteri(GL_TEXTURE_2D,GL_TEXTURE_MIN_FILTER,GL_NEAREST);
+   glTexParameteri(GL_TEXTURE_2D,GL_TEXTURE_MAG_FILTER,GL_NEAREST);
+   glTexParameteri(GL_TEXTURE_2D,GL_TEXTURE_WRAP_S,GL_REPEAT);
+   glTexParameteri(GL_TEXTURE_2D,GL_TEXTURE_WRAP_T,GL_REPEAT);
+
+   glBindFramebuffer(GL_FRAMEBUFFER,frameBuffer);
+   glFramebufferTexture2D(GL_FRAMEBUFFER,GL_DEPTH_ATTACHMENT,GL_TEXTURE_2D,frameMap,0);
+   glDrawBuffer(GL_NONE);
+   glReadBuffer(GL_NONE);
+   glBindFramebuffer(GL_FRAMEBUFFER,0);
+}
+
 void RenderManager::draw() const {
     for(auto iter=scenes.begin();iter!=scenes.end();++iter){
         if(iter->second!=NULL)

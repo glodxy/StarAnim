@@ -136,6 +136,9 @@
 		<Unit filename="D:/learn/computer-graphic/StarAnim/Object.h">
 			<Option target="Test"/>
 		</Unit>
+		<Unit filename="D:/learn/computer-graphic/StarAnim/Object/BaseObject.h">
+			<Option target="Test"/>
+		</Unit>
 		<Unit filename="D:/learn/computer-graphic/StarAnim/Object/Model/Mesh.cpp">
 			<Option target="Test"/>
 		</Unit>
@@ -179,6 +182,12 @@
 			<Option target="Test"/>
 		</Unit>
 		<Unit filename="D:/learn/computer-graphic/StarAnim/RenderManager.h">
+			<Option target="Test"/>
+		</Unit>
+		<Unit filename="D:/learn/computer-graphic/StarAnim/ShaderManager.cpp">
+			<Option target="Test"/>
+		</Unit>
+		<Unit filename="D:/learn/computer-graphic/StarAnim/ShaderManager.h">
 			<Option target="Test"/>
 		</Unit>
 		<Unit filename="D:/learn/computer-graphic/StarAnim/TestLight.h">

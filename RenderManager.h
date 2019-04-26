@@ -22,14 +22,19 @@ public:
     void setModel(const String& name,Model* model);
     void setScene(const String& name,BaseScene* scene);
 
+    void setSize(int w,int h);
+
+    void init()const;
+
     void draw()const;
 private:
     RenderManager();
     RenderManager(const RenderManager& r);
     static RenderManager *renderManager;
+    int _width,_height;
+    ID _frameBuffer,_frameMap;
     Map<BaseScene*> scenes;
     Map<Model*> models;
-
 };
 
 

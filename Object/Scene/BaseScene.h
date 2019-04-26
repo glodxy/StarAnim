@@ -9,6 +9,7 @@
 #include "../../Loader/ShaderLoader.h"
 #include "../../Loader/TextureLoader.h"
 #include "../../Camera/Camera.h"
+#include "../BaseObject.h"
 
 static float defaultSkyboxVertices[] = {
         // positions
@@ -56,24 +57,19 @@ static float defaultSkyboxVertices[] = {
 };
 
 
-class BaseScene{
+class BaseScene:public BaseObject{
 public:
     BaseScene(const String& rootPath);
     virtual ~BaseScene(){}
 
     virtual void draw()const=0;
 
-    void setPosition(const Vec3& position);
-    void BindShader(Shader *shader);
     void BindCamera(Camera *camera);
 protected:
     void copyIntoVertices(float* v,size_t size);
     void setupVAO();
 
-    String _directory;
     Vector<Vec3> _vertices;
-    Vec3 _position;
-    Shader *_shader;
     Camera* _camera;
     ID _VAO;
 };
