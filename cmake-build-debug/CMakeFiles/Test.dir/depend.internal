@@ -55,6 +55,7 @@ CMakeFiles/Test.dir/Object/Model/Mesh.cpp.obj
 CMakeFiles/Test.dir/Object/Model/Model.cpp.obj
  D:/learn/computer-graphic/StarAnim/Loader/ShaderLoader.h
  D:/learn/computer-graphic/StarAnim/Loader/TextureLoader.h
+ D:/learn/computer-graphic/StarAnim/Object/BaseObject.h
  D:/learn/computer-graphic/StarAnim/Object/Model/Mesh.h
  D:/learn/computer-graphic/StarAnim/Object/Model/Model.cpp
  D:/learn/computer-graphic/StarAnim/Object/Model/Model.h
@@ -63,6 +64,7 @@ CMakeFiles/Test.dir/Object/Scene/BaseScene.cpp.obj
  D:/learn/computer-graphic/StarAnim/Camera/Camera.h
  D:/learn/computer-graphic/StarAnim/Loader/ShaderLoader.h
  D:/learn/computer-graphic/StarAnim/Loader/TextureLoader.h
+ D:/learn/computer-graphic/StarAnim/Object/BaseObject.h
  D:/learn/computer-graphic/StarAnim/Object/Scene/BaseScene.cpp
  D:/learn/computer-graphic/StarAnim/Object/Scene/BaseScene.h
  D:/learn/computer-graphic/StarAnim/Transform.h
@@ -70,14 +72,17 @@ CMakeFiles/Test.dir/Object/Scene/Flat.cpp.obj
  D:/learn/computer-graphic/StarAnim/Camera/Camera.h
  D:/learn/computer-graphic/StarAnim/Loader/ShaderLoader.h
  D:/learn/computer-graphic/StarAnim/Loader/TextureLoader.h
+ D:/learn/computer-graphic/StarAnim/Object/BaseObject.h
  D:/learn/computer-graphic/StarAnim/Object/Scene/BaseScene.h
  D:/learn/computer-graphic/StarAnim/Object/Scene/Flat.cpp
  D:/learn/computer-graphic/StarAnim/Object/Scene/Flat.h
+ D:/learn/computer-graphic/StarAnim/ShaderManager.h
  D:/learn/computer-graphic/StarAnim/Transform.h
 CMakeFiles/Test.dir/Object/Scene/SkyBox.cpp.obj
  D:/learn/computer-graphic/StarAnim/Camera/Camera.h
  D:/learn/computer-graphic/StarAnim/Loader/ShaderLoader.h
  D:/learn/computer-graphic/StarAnim/Loader/TextureLoader.h
+ D:/learn/computer-graphic/StarAnim/Object/BaseObject.h
  D:/learn/computer-graphic/StarAnim/Object/Scene/BaseScene.h
  D:/learn/computer-graphic/StarAnim/Object/Scene/SkyBox.cpp
  D:/learn/computer-graphic/StarAnim/Object/Scene/SkyBox.h
@@ -86,6 +91,7 @@ CMakeFiles/Test.dir/RenderManager.cpp.obj
  D:/learn/computer-graphic/StarAnim/Camera/Camera.h
  D:/learn/computer-graphic/StarAnim/Loader/ShaderLoader.h
  D:/learn/computer-graphic/StarAnim/Loader/TextureLoader.h
+ D:/learn/computer-graphic/StarAnim/Object/BaseObject.h
  D:/learn/computer-graphic/StarAnim/Object/Model/Mesh.h
  D:/learn/computer-graphic/StarAnim/Object/Model/Model.h
  D:/learn/computer-graphic/StarAnim/Object/Model/Model_include.h
@@ -96,6 +102,12 @@ CMakeFiles/Test.dir/RenderManager.cpp.obj
  D:/learn/computer-graphic/StarAnim/Object/Scene/SkyBox.h
  D:/learn/computer-graphic/StarAnim/RenderManager.cpp
  D:/learn/computer-graphic/StarAnim/RenderManager.h
+ D:/learn/computer-graphic/StarAnim/ShaderManager.h
+ D:/learn/computer-graphic/StarAnim/Transform.h
+CMakeFiles/Test.dir/ShaderManager.cpp.obj
+ D:/learn/computer-graphic/StarAnim/Loader/ShaderLoader.h
+ D:/learn/computer-graphic/StarAnim/ShaderManager.cpp
+ D:/learn/computer-graphic/StarAnim/ShaderManager.h
  D:/learn/computer-graphic/StarAnim/Transform.h
 CMakeFiles/Test.dir/Timer.cpp.obj
  D:/learn/computer-graphic/StarAnim/Timer.cpp
@@ -110,6 +122,7 @@ CMakeFiles/Test.dir/test.cpp.obj
  D:/learn/computer-graphic/StarAnim/LightManager.h
  D:/learn/computer-graphic/StarAnim/Loader/ShaderLoader.h
  D:/learn/computer-graphic/StarAnim/Loader/TextureLoader.h
+ D:/learn/computer-graphic/StarAnim/Object/BaseObject.h
  D:/learn/computer-graphic/StarAnim/Object/Model/Mesh.h
  D:/learn/computer-graphic/StarAnim/Object/Model/Model.h
  D:/learn/computer-graphic/StarAnim/Object/Model/Model_include.h
@@ -119,6 +132,7 @@ CMakeFiles/Test.dir/test.cpp.obj
  D:/learn/computer-graphic/StarAnim/Object/Scene/Scene_include.h
  D:/learn/computer-graphic/StarAnim/Object/Scene/SkyBox.h
  D:/learn/computer-graphic/StarAnim/RenderManager.h
+ D:/learn/computer-graphic/StarAnim/ShaderManager.h
  D:/learn/computer-graphic/StarAnim/TestLight.h
  D:/learn/computer-graphic/StarAnim/Transform.h
  D:/learn/computer-graphic/StarAnim/test.cpp

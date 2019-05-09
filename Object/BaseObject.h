@@ -17,7 +17,8 @@ public:
     }
     virtual ~BaseObject(){}
 
-    virtual void draw()const=0;
+    virtual void draw(Shader* shader=NULL)const=0;
+    virtual void drawShadow(Shader*shadow)const=0;
 
     void setPosition(const Vec3& position){
         _position=position;
@@ -25,6 +26,8 @@ public:
     void BindShader(Shader *shader){
         _shader=shader;
     }
+
+    virtual Mat4 getModelMatrix()const=0;
 
 protected:
     Shader* _shader;

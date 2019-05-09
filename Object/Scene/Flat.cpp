@@ -3,6 +3,7 @@
 //
 
 #include "Flat.h"
+#include "../../ShaderManager.h"
 
 Flat::Flat(const String& rootPath,float x, float y):BaseScene(rootPath){
     _size.x=x;
@@ -60,6 +61,7 @@ void Flat::initVertices() {
 //设置线框VAO
 void Flat::setupWireVAO() {
     ID VBO;
+
     glGenVertexArrays(1,&_WireVAO);
     glGenBuffers(1,&VBO);
     glBindVertexArray(_WireVAO);
@@ -71,18 +73,27 @@ void Flat::setupWireVAO() {
 }
 
 void Flat::initWireShader() {
-    String vs=_directory+"/shader/Ground/grid.vert";
-    String fg=_directory+"/shader/Ground/grid.frag";
-    _wireFrameShader=new Shader(vs.c_str(),fg.c_str());
+    _wireFrameShader=ShaderManager::getShaderManager()->getShader("default_grid");
 }
 
 void Flat::initGroundShader(){
-    String vs=_directory+"/Shader/Ground/ground.vert";
-    String fg=_directory+"/Shader/Ground/ground.frag";
-    _shader=new Shader(vs.c_str(),fg.c_str());
+    _shader=ShaderManager::getShaderManager()->getShader("default_ground");
 }
 
-void Flat::draw() const {
+Mat4 Flat::getModelMatrix() const {
+    Mat4 model(1.0f);
+    model=glm::scale(model,Vec3(_size[0],1.0f,_size[1]));
+    return model;
+}
+
+void Flat::drawShadow(Shader *shader) const {
+    shader->setMat4(getModelMatrix(),"model");
+    glBindVertexArray(_VAO);
+    glDrawArrays(GL_TRIANGLE_STRIP,0,4);
+    glBindVertexArray(0);
+}
+
+void Flat::draw(Shader* shader) const {
     _shader->Use();
     Mat4 model(1.0f);
     model=glm::scale(model,Vec3(_size[0],1.0f,_size[1]));

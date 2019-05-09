@@ -72,15 +72,4 @@ void InitLight(){
     glBindVertexArray(0);
 }
 
-void DrawLight(Camera* camera){
-    ls->Use();
-    ls->setMat4(camera->getProjectionMatrix(),"projection");
-    ls->setMat4(camera->getViewMatrix(),"view");
-    Mat4 model(1.0f);
-    model=glm::translate(model,lightPos);
-    ls->setMat4(model,"model");
-    glBindVertexArray(_LIGHT);
-    glDrawArrays(GL_TRIANGLES,0,36);
-    glBindVertexArray(0);
-}
 #endif //TEST_TESTLIGHT_H

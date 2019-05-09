@@ -15,7 +15,8 @@
 class Model:public BaseObject{
 public:
     Model(const String& filePath);
-    virtual void draw()const;
+    virtual void draw(Shader*shader=NULL)const;
+    virtual void drawShadow(Shader*shadow)const;
 
 
     void move(float x,float y,float z);

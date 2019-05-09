@@ -10,20 +10,6 @@ Model::Model(const String &filePath):BaseObject(filePath){
     _rotation=Quat(1,0,0,0);
 }
 
-void Model::draw() const {
-    if(_shader!=NULL)
-    {
-        _shader->Use();
-        _shader->setMat4(getModelMatrix(),"model");
-        for(Index i=0;i<_meshes.size();++i){
-            _meshes[i].draw(*_shader);
-        }
-    }
-    else {
-        std::cout<<"model:"<<_directory<<" not bind shader"<<std::endl;
-    }
-}
-
 void Model::loadModel(const String &filePath) {
     Assimp::Importer importer;
     const aiScene* scene=importer.ReadFile(filePath,aiProcess_Triangulate | aiProcess_FlipUVs | aiProcess_CalcTangentSpace);
@@ -182,12 +168,31 @@ void Model::rotate(float pitch, float yaw, float roll) {
     _rotation=_rotation*temp;
 }
 
-
-
 Mat4 Model::getModelMatrix() const {
     Mat4 result(1.0f);
     result=glm::translate(result,_position);
     result=result*glm::mat4_cast(_rotation);
     result=glm::scale(result,_scale);
     return result;
+}
+
+void Model::draw(Shader *shader) const {
+    if(_shader!=NULL)
+    {
+        _shader->Use();
+        _shader->setMat4(getModelMatrix(),"model");
+        for(Index i=0;i<_meshes.size();++i){
+            _meshes[i].draw(*_shader);
+        }
+    }
+    else {
+        std::cout<<"model:"<<_directory<<" not bind shader"<<std::endl;
+    }
+}
+
+void Model::drawShadow(Shader *shadow) const {
+    shadow->setMat4(getModelMatrix(),"model");
+    for(Index i=0;i<_meshes.size();++i){
+        _meshes[i].drawShadow(_shader);
+    }
 }

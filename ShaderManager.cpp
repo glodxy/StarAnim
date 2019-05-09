@@ -19,6 +19,13 @@ ShaderManager* ShaderManager::getShaderManager() {
     return _shaderManager;
 }
 
+void ShaderManager::init() {
+    createShader("default",File::getShaderPath("vertex"),File::getShaderPath("test_fragment"));
+    createShader("default_groud",File::getShaderPath("Ground/ground.vert"),File::getShaderPath("Ground/ground.frag"));
+    createShader("default_grid",File::getShaderPath("Ground/grid.vert"),File::getShaderPath("Ground/grid.frag"));
+    //createShader("default_shadow",File::getShaderPath("Shadow/shadow.vert"),File::getShaderPath("Shadow/shadow.frag"));
+}
+
 void ShaderManager::addShader(const String &name, Shader *shader) {
     if(_shaderList.find(name)==_shaderList.end())
     {
@@ -30,14 +37,14 @@ void ShaderManager::addShader(const String &name, Shader *shader) {
 }
 
 
-const Shader* ShaderManager::getShader(const String &name) const {
+Shader* ShaderManager::getShader(const String &name) {
     auto iter=_shaderList.find(name);
     if(iter==_shaderList.end())
     {
         std::cout<<name<<" not existed, get shader error"<<std::endl;
         return NULL;
     }
-    return const_cast<const Shader*>(iter->second);
+    return iter->second;
 }
 
 void ShaderManager::removeShader(const String &name) {
@@ -76,7 +83,10 @@ void createShader(const String& name,ShaderInfo*si){
 }
 
 void createShader(const String&name,const String&v,const String&f,const String&g){
-    ShaderInfo si{v.c_str(),f.c_str(),g.c_str()};
+    ShaderInfo si{v.c_str(),f.c_str(),NULL};
+    if(g.size()!=0){
+        si.geoShader=g.c_str();
+    }
     Shader* shader=new Shader(&si);
     ShaderManager::getShaderManager()->addShader(name,shader);
 }

@@ -78,3 +78,9 @@ void Mesh::draw(Shader shader) const {
 
     glActiveTexture(GL_TEXTURE0);
 }
+
+void Mesh::drawShadow(Shader *shader) const {
+    glBindVertexArray(_VAO);
+    glDrawElements(GL_TRIANGLES,_indices.size(),GL_UNSIGNED_INT,0);
+    glBindVertexArray(0);
+}

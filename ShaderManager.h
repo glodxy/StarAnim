@@ -9,7 +9,7 @@
 #include "Loader/ShaderLoader.h"
 
 void createShader(const String& name,ShaderInfo*s);
-void createShader(const String& name,const String& v,const String& f,const String& g=NULL);
+void createShader(const String& name,const String& v,const String& f,const String& g="");
 
 /*
  * todo:
@@ -22,13 +22,15 @@ public:
 
     static ShaderManager* getShaderManager();
 
+    void init();
+
     void addShader(const String& name,Shader* shader=NULL);
 
     void removeShader(const String& name);
 
     void setShader(const String&name,Shader*shader);
 
-    const Shader* getShader(const String& name)const;
+    Shader* getShader(const String& name);
 
     String getShaderName(Shader* shader)const;
 

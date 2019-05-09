@@ -58,6 +58,7 @@ public:
     Mesh(Vector<Vertex> vertices,Vector<Index> indices,Vector<Texture> textures,Material material);
 
     void draw(Shader shader)const;
+    void drawShadow(Shader *shader)const;
 protected:
     void setupMesh();
 private:

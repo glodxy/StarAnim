@@ -103,3 +103,9 @@ void RenderManager::draw() const {
         }
     }
 }
+
+void RenderManager::drawShadow() const {
+    Shader* shader=ShaderManager::getShaderManager()->getShader("default_shadow");
+    shader->Use();
+
+}

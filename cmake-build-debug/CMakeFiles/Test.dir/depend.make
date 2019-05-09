@@ -54,6 +54,7 @@ CMakeFiles/Test.dir/Object/Model/Mesh.cpp.obj: ../Transform.h
 
 CMakeFiles/Test.dir/Object/Model/Model.cpp.obj: ../Loader/ShaderLoader.h
 CMakeFiles/Test.dir/Object/Model/Model.cpp.obj: ../Loader/TextureLoader.h
+CMakeFiles/Test.dir/Object/Model/Model.cpp.obj: ../Object/BaseObject.h
 CMakeFiles/Test.dir/Object/Model/Model.cpp.obj: ../Object/Model/Mesh.h
 CMakeFiles/Test.dir/Object/Model/Model.cpp.obj: ../Object/Model/Model.cpp
 CMakeFiles/Test.dir/Object/Model/Model.cpp.obj: ../Object/Model/Model.h
@@ -62,6 +63,7 @@ CMakeFiles/Test.dir/Object/Model/Model.cpp.obj: ../Transform.h
 CMakeFiles/Test.dir/Object/Scene/BaseScene.cpp.obj: ../Camera/Camera.h
 CMakeFiles/Test.dir/Object/Scene/BaseScene.cpp.obj: ../Loader/ShaderLoader.h
 CMakeFiles/Test.dir/Object/Scene/BaseScene.cpp.obj: ../Loader/TextureLoader.h
+CMakeFiles/Test.dir/Object/Scene/BaseScene.cpp.obj: ../Object/BaseObject.h
 CMakeFiles/Test.dir/Object/Scene/BaseScene.cpp.obj: ../Object/Scene/BaseScene.cpp
 CMakeFiles/Test.dir/Object/Scene/BaseScene.cpp.obj: ../Object/Scene/BaseScene.h
 CMakeFiles/Test.dir/Object/Scene/BaseScene.cpp.obj: ../Transform.h
@@ -69,14 +71,17 @@ CMakeFiles/Test.dir/Object/Scene/BaseScene.cpp.obj: ../Transform.h
 CMakeFiles/Test.dir/Object/Scene/Flat.cpp.obj: ../Camera/Camera.h
 CMakeFiles/Test.dir/Object/Scene/Flat.cpp.obj: ../Loader/ShaderLoader.h
 CMakeFiles/Test.dir/Object/Scene/Flat.cpp.obj: ../Loader/TextureLoader.h
+CMakeFiles/Test.dir/Object/Scene/Flat.cpp.obj: ../Object/BaseObject.h
 CMakeFiles/Test.dir/Object/Scene/Flat.cpp.obj: ../Object/Scene/BaseScene.h
 CMakeFiles/Test.dir/Object/Scene/Flat.cpp.obj: ../Object/Scene/Flat.cpp
 CMakeFiles/Test.dir/Object/Scene/Flat.cpp.obj: ../Object/Scene/Flat.h
+CMakeFiles/Test.dir/Object/Scene/Flat.cpp.obj: ../ShaderManager.h
 CMakeFiles/Test.dir/Object/Scene/Flat.cpp.obj: ../Transform.h
 
 CMakeFiles/Test.dir/Object/Scene/SkyBox.cpp.obj: ../Camera/Camera.h
 CMakeFiles/Test.dir/Object/Scene/SkyBox.cpp.obj: ../Loader/ShaderLoader.h
 CMakeFiles/Test.dir/Object/Scene/SkyBox.cpp.obj: ../Loader/TextureLoader.h
+CMakeFiles/Test.dir/Object/Scene/SkyBox.cpp.obj: ../Object/BaseObject.h
 CMakeFiles/Test.dir/Object/Scene/SkyBox.cpp.obj: ../Object/Scene/BaseScene.h
 CMakeFiles/Test.dir/Object/Scene/SkyBox.cpp.obj: ../Object/Scene/SkyBox.cpp
 CMakeFiles/Test.dir/Object/Scene/SkyBox.cpp.obj: ../Object/Scene/SkyBox.h
@@ -85,6 +90,7 @@ CMakeFiles/Test.dir/Object/Scene/SkyBox.cpp.obj: ../Transform.h
 CMakeFiles/Test.dir/RenderManager.cpp.obj: ../Camera/Camera.h
 CMakeFiles/Test.dir/RenderManager.cpp.obj: ../Loader/ShaderLoader.h
 CMakeFiles/Test.dir/RenderManager.cpp.obj: ../Loader/TextureLoader.h
+CMakeFiles/Test.dir/RenderManager.cpp.obj: ../Object/BaseObject.h
 CMakeFiles/Test.dir/RenderManager.cpp.obj: ../Object/Model/Mesh.h
 CMakeFiles/Test.dir/RenderManager.cpp.obj: ../Object/Model/Model.h
 CMakeFiles/Test.dir/RenderManager.cpp.obj: ../Object/Model/Model_include.h
@@ -95,7 +101,13 @@ CMakeFiles/Test.dir/RenderManager.cpp.obj: ../Object/Scene/Scene_include.h
 CMakeFiles/Test.dir/RenderManager.cpp.obj: ../Object/Scene/SkyBox.h
 CMakeFiles/Test.dir/RenderManager.cpp.obj: ../RenderManager.cpp
 CMakeFiles/Test.dir/RenderManager.cpp.obj: ../RenderManager.h
+CMakeFiles/Test.dir/RenderManager.cpp.obj: ../ShaderManager.h
 CMakeFiles/Test.dir/RenderManager.cpp.obj: ../Transform.h
+
+CMakeFiles/Test.dir/ShaderManager.cpp.obj: ../Loader/ShaderLoader.h
+CMakeFiles/Test.dir/ShaderManager.cpp.obj: ../ShaderManager.cpp
+CMakeFiles/Test.dir/ShaderManager.cpp.obj: ../ShaderManager.h
+CMakeFiles/Test.dir/ShaderManager.cpp.obj: ../Transform.h
 
 CMakeFiles/Test.dir/Timer.cpp.obj: ../Timer.cpp
 CMakeFiles/Test.dir/Timer.cpp.obj: ../Timer.h
@@ -109,6 +121,7 @@ CMakeFiles/Test.dir/test.cpp.obj: ../Light/SpotLight.h
 CMakeFiles/Test.dir/test.cpp.obj: ../LightManager.h
 CMakeFiles/Test.dir/test.cpp.obj: ../Loader/ShaderLoader.h
 CMakeFiles/Test.dir/test.cpp.obj: ../Loader/TextureLoader.h
+CMakeFiles/Test.dir/test.cpp.obj: ../Object/BaseObject.h
 CMakeFiles/Test.dir/test.cpp.obj: ../Object/Model/Mesh.h
 CMakeFiles/Test.dir/test.cpp.obj: ../Object/Model/Model.h
 CMakeFiles/Test.dir/test.cpp.obj: ../Object/Model/Model_include.h
@@ -118,6 +131,7 @@ CMakeFiles/Test.dir/test.cpp.obj: ../Object/Scene/Flat.h
 CMakeFiles/Test.dir/test.cpp.obj: ../Object/Scene/Scene_include.h
 CMakeFiles/Test.dir/test.cpp.obj: ../Object/Scene/SkyBox.h
 CMakeFiles/Test.dir/test.cpp.obj: ../RenderManager.h
+CMakeFiles/Test.dir/test.cpp.obj: ../ShaderManager.h
 CMakeFiles/Test.dir/test.cpp.obj: ../TestLight.h
 CMakeFiles/Test.dir/test.cpp.obj: ../Transform.h
 CMakeFiles/Test.dir/test.cpp.obj: ../test.cpp

@@ -50,4 +50,13 @@ static String getFormatStr(IMAGE_FORMAT f){
     }
 }
 
+
+class File{
+public:
+    static String getRootPath();
+    static String getShaderPath(const String& shader){
+        return "d:/learn/computer-graphic/StarAnim/Shader/"+shader;
+    }
+};
+
 #endif //STARANIM_TRANSFORM_H

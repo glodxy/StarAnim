@@ -15,9 +15,11 @@
 #include "TestLight.h"
 #include "LightManager.h"
 #include "RenderManager.h"
+#include "ShaderManager.h"
 
 LightManager* lightManager;
 RenderManager* renderManager;
+ShaderManager* shaderManager;
 int width,height;
 Shader *shader;
 Camera camera;
@@ -93,9 +95,12 @@ void do_move(){
 //初始化顶点数据，纹理数据以及着色器
 void initShader(){
     lightManager=LightManager::getLightManager();
+    shaderManager=ShaderManager::getShaderManager();
+    shaderManager->init();
     renderManager=RenderManager::getRenderManager();
-    ls=new Shader("Vertex","light");
-    shader=new Shader("Vertex","test_fragment");
+
+    shader=shaderManager->getShader("default");
+//    shader=new Shader("Vertex","test_fragment");
     shader->setBool(true,"blinn");
     camera=Camera(glm::vec3(0.0f,0.0f,3.0f));
 

@@ -62,8 +62,6 @@ public:
     BaseScene(const String& rootPath);
     virtual ~BaseScene(){}
 
-    virtual void draw()const=0;
-
     void BindCamera(Camera *camera);
 protected:
     void copyIntoVertices(float* v,size_t size);

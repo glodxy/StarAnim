@@ -18,7 +18,10 @@ public:
 
     void bindCamera(Camera* camera);
 
-    virtual void draw()const;
+    virtual void draw(Shader*shader=NULL)const;
+    virtual void drawShadow(Shader* shader)const;
+
+    virtual Mat4 getModelMatrix()const;
 
     void setLineStrip(bool show);
 protected:

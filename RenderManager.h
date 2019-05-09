@@ -6,7 +6,12 @@
 #define TEST_RENDERMANAGER_H
 
 #include "Object/Object_include.h"
+#include "ShaderManager.h"
 
+/*
+ * todo:
+ * 优化shader与object关联存储方式
+ * */
 class RenderManager {
 public:
     typedef Pair<Model*> ModelKey;
@@ -28,6 +33,7 @@ public:
 
     void draw()const;
 private:
+    void drawShadow()const;
     RenderManager();
     RenderManager(const RenderManager& r);
     static RenderManager *renderManager;
