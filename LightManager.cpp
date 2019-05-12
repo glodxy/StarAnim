@@ -29,7 +29,9 @@ void LightManager::addLight(LightType type, Light *light) {
     switch(type){
         case DIR_LIGHT:{
             name="dirLight";
-            break;
+            light->setName(name);
+            _dirLight=(DirLight*)light;
+            return;
         }
         case POINT_LIGHT:{
             name="pointLights["+std::to_string(_pointLightCount)+"]";
@@ -50,17 +52,29 @@ void LightManager::addLight(LightType type, Light *light) {
     _lightList->push_back(light);
 }
 
-void LightManager::bindShader(Shader *s) {
-    _shader=s;
-    for(int i=0;i<_lightList->size();++i){
-        (*_lightList)[i]->bindShader(s);
+DirLight * LightManager::getDirLight() {
+    if(_dirLight==NULL){
+        std::cout<<"error get direct light, light not exist"<<std::endl;
+        return NULL;
     }
+    return _dirLight;
 }
 
-void LightManager::use() const {
-    _shader->setInt(_pointLightCount,"pointLightSize");
-    _shader->setInt(_spotLightCount,"spotLightSize");
+
+
+Mat4 LightManager::getLightSpaceMatrix() const {
+    Vec3 dir=_dirLight->getDirection();
+    dir*=10.0;
+    Mat4 lightView=glm::lookAt(-dir, glm::vec3(0,0,0), glm::vec3(0,1.0,0));
+    Mat4 lightProjection=glm::ortho(-10.0f,10.0f,-10.0f,10.0f,1.0f,50.0f);
+    return (lightProjection*lightView);
+}
+
+void LightManager::use(Shader* shader) const {
+    shader->setInt(_pointLightCount,"pointLightSize");
+    shader->setInt(_spotLightCount,"spotLightSize");
+    _dirLight->use(shader);
     for(int i=0;i<_lightList->size();++i){
-        (*_lightList)[i]->use();
+        (*_lightList)[i]->use(shader);
     }
 }

@@ -14,7 +14,6 @@ Light::Light(const Vec3 &ambient, const Vec3 &diffuse, const Vec3 &specular):Lig
 }
 
 Light::~Light() {
-    _shader=nullptr;
 }
 
 void Light::setAmbient(const Vec3 &ambient) {
@@ -31,12 +30,4 @@ void Light::setSpecular(const Vec3 &specular) {
 
 void Light::setName(const String &name) {
     _name=name;
-}
-
-void Light::bindShader(Shader *shader) {
-    _shader=shader;
-}
-
-void Light::unBindShader() {
-    _shader=nullptr;
 }

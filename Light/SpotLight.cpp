@@ -27,20 +27,19 @@ void SpotLight::setOuterCutOff(float oc) {
     _outerCutOff=oc;
 }
 
-void SpotLight::use() {
-    _shader->setVec3(_ambient,_name+".ambient");
-    _shader->setVec3(_diffuse,_name+".diffuse");
-    _shader->setVec3(_specular,_name+".specular");
+void SpotLight::use(Shader* shader) {
+    shader->setVec3(_ambient,_name+".base.base.ambient");
+    shader->setVec3(_diffuse,_name+".base.base.diffuse");
+    shader->setVec3(_specular,_name+".base.base.specular");
 
-    _shader->setVec3(_position,_name+".position");
+    shader->setVec3(_position,_name+".base.position");
 
-    _shader->setVec3(_direction,_name+".direction");
-    _shader->setFloat(_innerCutOff,_name+".innercutoff");
-    _shader->setFloat(_outerCutOff,_name+".outercutoff");
+    shader->setVec3(_direction,_name+".direction");
+    shader->setFloat(_innerCutOff,_name+".innercutoff");
+    shader->setFloat(_outerCutOff,_name+".outercutoff");
 
-    _shader->setFloat(_constant,_name+".constant");
-    _shader->setFloat(_linear,_name+".linear");
-    _shader->setFloat(_quadratic,_name+".quadratic");
+    shader->setFloat(_constant,_name+".base.constant");
+    shader->setFloat(_linear,_name+".base.linear");
+    shader->setFloat(_quadratic,_name+".base.quadratic");
 
-    _shader->setFloat(0,_name+".flag");
 }

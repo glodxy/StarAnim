@@ -88,6 +88,12 @@ CMakeFiles/Test.dir/Object/Scene/SkyBox.cpp.obj: ../Object/Scene/SkyBox.h
 CMakeFiles/Test.dir/Object/Scene/SkyBox.cpp.obj: ../Transform.h
 
 CMakeFiles/Test.dir/RenderManager.cpp.obj: ../Camera/Camera.h
+CMakeFiles/Test.dir/RenderManager.cpp.obj: ../Light/DirLight.h
+CMakeFiles/Test.dir/RenderManager.cpp.obj: ../Light/Light.h
+CMakeFiles/Test.dir/RenderManager.cpp.obj: ../Light/Light_include.h
+CMakeFiles/Test.dir/RenderManager.cpp.obj: ../Light/PointLight.h
+CMakeFiles/Test.dir/RenderManager.cpp.obj: ../Light/SpotLight.h
+CMakeFiles/Test.dir/RenderManager.cpp.obj: ../LightManager.h
 CMakeFiles/Test.dir/RenderManager.cpp.obj: ../Loader/ShaderLoader.h
 CMakeFiles/Test.dir/RenderManager.cpp.obj: ../Loader/TextureLoader.h
 CMakeFiles/Test.dir/RenderManager.cpp.obj: ../Object/BaseObject.h

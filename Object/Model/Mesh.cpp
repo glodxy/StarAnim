@@ -42,14 +42,14 @@ void Mesh::setupMesh() {
     glBindVertexArray(0);
 }
 
-void Mesh::draw(Shader shader) const {
+void Mesh::draw(Shader *shader) const {
     Index diffuseNum=0;
     Index specularNum=0;
     Index normalNum=1;
     Index heightNum=1;
 
     for(Index i=0;i<_textures.size();++i){
-        glActiveTexture(GL_TEXTURE0+i);
+        glActiveTexture(GL_TEXTURE0+i+1);
 
         String num;
         String name=_textures[i].type;
@@ -62,24 +62,39 @@ void Mesh::draw(Shader shader) const {
         else if(name=="texture_height")
             num="["+std::to_string(heightNum++)+"]";
 
-        glUniform1i(glGetUniformLocation(shader.ProgramID,(name+num).c_str()),i);
+        glUniform1i(glGetUniformLocation(shader->ProgramID,(name+num).c_str()),i+1);
         glBindTexture(GL_TEXTURE_2D,_textures[i].id);
     }
-    shader.setInt(diffuseNum,"textureDiffuseSize");
-    shader.setInt(specularNum,"textureSpecularSize");
-    shader.setVec3(Vec3(_material.ambient),"material.ambient");
-    shader.setVec3(Vec3(_material.diffuse),"material.diffuse");
-    shader.setVec3(Vec3(_material.specular),"material.specular");
-    shader.setFloat(_material.shininess,"material.shininess");
-    shader.setFloat(_material.opacity,"material.opacity");
+    shader->setInt(diffuseNum,"textureDiffuseSize");
+    shader->setInt(specularNum,"textureSpecularSize");
+    shader->setVec3(Vec3(_material.ambient),"material.ambient");
+    shader->setVec3(Vec3(_material.diffuse),"material.diffuse");
+    shader->setVec3(Vec3(_material.specular),"material.specular");
+    shader->setFloat(_material.shininess,"material.shininess");
+    shader->setFloat(_material.opacity,"material.opacity");
     glBindVertexArray(_VAO);
     glDrawElements(GL_TRIANGLES,_indices.size(),GL_UNSIGNED_INT,0);
     glBindVertexArray(0);
 
+    shader->setInt(0,"textureDiffuseSize");
+    shader->setInt(0,"textureSpecularSize");
+    shader->setVec3(Vec3(0.5,0.5,0.5),"material.ambient");
+    shader->setVec3(Vec3(1.0,1.0,1.0),"material.diffuse");
+    shader->setVec3(Vec3(0.0,0.0,0.0),"material.specular");
+    shader->setFloat(0.0,"material.shininess");
+    shader->setFloat(1.0,"material.opacity");
+
     glActiveTexture(GL_TEXTURE0);
+
 }
 
 void Mesh::drawShadow(Shader *shader) const {
+    glBindVertexArray(_VAO);
+    glDrawElements(GL_TRIANGLES,_indices.size(),GL_UNSIGNED_INT,0);
+    glBindVertexArray(0);
+}
+
+void Mesh::drawNormal(Shader *shader) const {
     glBindVertexArray(_VAO);
     glDrawElements(GL_TRIANGLES,_indices.size(),GL_UNSIGNED_INT,0);
     glBindVertexArray(0);

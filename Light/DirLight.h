@@ -13,7 +13,9 @@ public:
             const Vec3& ambient=Vec3(1.0f,1.0f,1.0f),const Vec3& diffuse=Vec3(1.0f,1.0f,1.0f),const Vec3& specular=Vec3(1.0f,1.0f,1.0f));
 
     void setDirection(const Vec3& direction);
-    virtual void use();
+    Vec3 getDirection()const;
+
+    virtual void use(Shader* shader);
 protected:
     Vec3 _direction;
 };

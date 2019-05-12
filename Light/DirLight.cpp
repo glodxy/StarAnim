@@ -12,10 +12,13 @@ void DirLight::setDirection(const Vec3 &direction) {
     _direction=direction;
 }
 
-void DirLight::use() {
-    _shader->setVec3(_ambient,_name+".ambient");
-    _shader->setVec3(_diffuse,_name+".diffuse");
-    _shader->setVec3(_specular,_name+".specular");
-    _shader->setVec3(_direction,_name+".direction");
-    _shader->setFloat(1,_name+".flag");
+Vec3 DirLight::getDirection()const{
+    return _direction;
+}
+
+void DirLight::use(Shader* shader) {
+    shader->setVec3(_ambient,_name+".base.ambient");
+    shader->setVec3(_diffuse,_name+".base.diffuse");
+    shader->setVec3(_specular,_name+".base.specular");
+    shader->setVec3(_direction,_name+".direction");
 }

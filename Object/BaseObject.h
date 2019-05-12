@@ -30,7 +30,7 @@ public:
     virtual Mat4 getModelMatrix()const=0;
 
 protected:
-    Shader* _shader;
+    Shader* _shader=NULL;
     String _directory;
     Vec3 _position;
 };

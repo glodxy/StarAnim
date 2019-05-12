@@ -7,6 +7,7 @@
 
 #include "Object/Object_include.h"
 #include "ShaderManager.h"
+#include "LightManager.h"
 
 /*
  * todo:
@@ -29,16 +30,22 @@ public:
 
     void setSize(int w,int h);
 
-    void init()const;
+    void init();
 
     void draw()const;
-private:
     void drawShadow()const;
+
+    void debugNormal(Camera *c)const;
+
+    void debugShadow()const;
+private:
+
     RenderManager();
     RenderManager(const RenderManager& r);
     static RenderManager *renderManager;
     int _width,_height;
     ID _frameBuffer,_frameMap;
+    ID quadVAO;
     Map<BaseScene*> scenes;
     Map<Model*> models;
 };

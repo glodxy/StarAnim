@@ -180,19 +180,33 @@ void Model::draw(Shader *shader) const {
     if(_shader!=NULL)
     {
         _shader->Use();
-        _shader->setMat4(getModelMatrix(),"model");
-        for(Index i=0;i<_meshes.size();++i){
-            _meshes[i].draw(*_shader);
-        }
+        //do something
+        std::cout<<"model in own shader"<<std::endl;
+        return;
     }
     else {
-        std::cout<<"model:"<<_directory<<" not bind shader"<<std::endl;
+        if(shader!=NULL){
+            shader->Use();
+            shader->setMat4(getModelMatrix(),"model");
+            for(Index i=0;i<_meshes.size();++i){
+                _meshes[i].draw(shader);
+            }
+        }
+        else
+            std::cout<<"model:"<<_directory<<" not bind shader"<<std::endl;
     }
 }
 
 void Model::drawShadow(Shader *shadow) const {
     shadow->setMat4(getModelMatrix(),"model");
     for(Index i=0;i<_meshes.size();++i){
-        _meshes[i].drawShadow(_shader);
+        _meshes[i].drawShadow(shadow);
+    }
+}
+
+void Model::drawNormal(Shader *shader) const {
+    shader->setMat4(getModelMatrix(),"model");
+    for(Index i=0;i<_meshes.size();++i){
+        _meshes[i].drawNormal(shader);
     }
 }

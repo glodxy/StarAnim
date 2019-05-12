@@ -85,11 +85,11 @@ glm::vec3 cubePositions[] = {
 
 
 static ShaderInfo si{
-    "vertex",
+    "default.vert",
     "fragment"
 };
 static ShaderInfo ls{
-    "vertex",
+    "default.vert",
     "light_fragment"
 };
 

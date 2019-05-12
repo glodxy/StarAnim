@@ -43,7 +43,7 @@ typedef struct{
     Vec4 ambient=Vec4(1.0,1.0,1.0,1.0);
     Vec4 diffuse=Vec4(1.0,1.0,1.0,1.0);
     Vec4 specular=Vec4(1.0,1.0,1.0,1.0);
-    float shininess;
+    float shininess=0;
     float opacity=1.0;
 }Material;
 
@@ -57,8 +57,9 @@ public:
 
     Mesh(Vector<Vertex> vertices,Vector<Index> indices,Vector<Texture> textures,Material material);
 
-    void draw(Shader shader)const;
+    void draw(Shader *shader)const;
     void drawShadow(Shader *shader)const;
+    void drawNormal(Shader *shader)const;
 protected:
     void setupMesh();
 private:

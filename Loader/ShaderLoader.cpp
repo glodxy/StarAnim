@@ -51,7 +51,7 @@ GLuint createShader(GLenum shaderType,const char*fileName){
         glGetShaderInfoLog(shader,512,NULL,infoLog);
         switch(shaderType){
             case GL_VERTEX_SHADER:
-                std::cout<<"type:vertex shader\n";
+                std::cout<<"type:default.vert shader\n";
                 break;
             case GL_FRAGMENT_SHADER:
                 std::cout<<"type:fragment shader\n";

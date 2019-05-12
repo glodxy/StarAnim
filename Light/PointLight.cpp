@@ -26,12 +26,12 @@ void PointLight::setLightStrenth(float constant, float linear, float quadratic) 
     _quadratic=quadratic;
 }
 
-void PointLight::use() {
-    _shader->setVec3(_ambient,_name+".ambient");
-    _shader->setVec3(_diffuse,_name+".diffuse");
-    _shader->setVec3(_specular,_name+".specular");
-    _shader->setFloat(_constant,_name+".constant");
-    _shader->setFloat(_linear,_name+".linear");
-    _shader->setFloat(_quadratic,_name+".quadratic");
-    _shader->setVec3(_position,_name+".position");
+void PointLight::use(Shader*shader) {
+    shader->setVec3(_ambient,_name+".base.ambient");
+    shader->setVec3(_diffuse,_name+".base.diffuse");
+    shader->setVec3(_specular,_name+".base.specular");
+    shader->setFloat(_constant,_name+".constant");
+    shader->setFloat(_linear,_name+".linear");
+    shader->setFloat(_quadratic,_name+".quadratic");
+    shader->setVec3(_position,_name+".position");
 }

@@ -20,10 +20,12 @@ ShaderManager* ShaderManager::getShaderManager() {
 }
 
 void ShaderManager::init() {
-    createShader("default",File::getShaderPath("vertex"),File::getShaderPath("test_fragment"));
-    createShader("default_groud",File::getShaderPath("Ground/ground.vert"),File::getShaderPath("Ground/ground.frag"));
+    createShader("default",File::getShaderPath("default.vert"),File::getShaderPath("default.frag"));
+    createShader("default_ground",File::getShaderPath("Ground/ground.vert"),File::getShaderPath("Ground/ground.frag"));
     createShader("default_grid",File::getShaderPath("Ground/grid.vert"),File::getShaderPath("Ground/grid.frag"));
-    //createShader("default_shadow",File::getShaderPath("Shadow/shadow.vert"),File::getShaderPath("Shadow/shadow.frag"));
+    createShader("default_shadow",File::getShaderPath("Shadow/shadow.vert"),File::getShaderPath("Shadow/shadow.frag"));
+    createShader("default_shadow_debug",File::getShaderPath("Shadow/debug.vert"),File::getShaderPath("Shadow/debug.frag"));
+    createShader("default_normal",File::getShaderPath("Normal/normal.vert"),File::getShaderPath("Normal/normal.frag"),File::getShaderPath("Normal/normal.geom"));
 }
 
 void ShaderManager::addShader(const String &name, Shader *shader) {

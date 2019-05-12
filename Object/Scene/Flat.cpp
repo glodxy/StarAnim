@@ -94,25 +94,39 @@ void Flat::drawShadow(Shader *shader) const {
 }
 
 void Flat::draw(Shader* shader) const {
-    _shader->Use();
+    glDepthFunc(GL_LEQUAL);
     Mat4 model(1.0f);
-    model=glm::scale(model,Vec3(_size[0],1.0f,_size[1]));
-    _shader->setMat4(model,"model");
-    _shader->setMat4(_camera->getViewMatrix(),"view");
-    _shader->setMat4(_camera->getProjectionMatrix(),"projection");
-    _shader->setFloat(_size.x,"xSize");
-    _shader->setFloat(_size.y,"ySize");
+    model = glm::scale(model, Vec3(_size[0], 1.0f, _size[1]));
+    _shader->Use();
+    _shader->setMat4(model, "model");
+    _shader->setMat4(_camera->getViewMatrix(), "view");
+    _shader->setMat4(_camera->getProjectionMatrix(), "projection");
+    _shader->setFloat(_size.x, "xSize");
+    _shader->setFloat(_size.y, "ySize");
     glBindVertexArray(_VAO);
-    glDrawArrays(GL_TRIANGLE_STRIP,0,4);
-    if(_show) {
+    glDrawArrays(GL_TRIANGLE_STRIP, 0, 4);
+    glBindVertexArray(0);
+    if(shader!=NULL){
+
+        shader->Use();
+        //do something
+        shader->setBool(true,"floor");
+        shader->setMat4(model,"model");
+        glBindVertexArray(_VAO);
+        glDrawArrays(GL_TRIANGLE_STRIP, 0, 4);
+        shader->setBool(false,"floor");
+    }
+
+    if (_show) {
         _wireFrameShader->Use();
-        _wireFrameShader->setMat4(model,"model");
-        _wireFrameShader->setMat4(_camera->getViewMatrix(),"view");
-        _wireFrameShader->setMat4(_camera->getProjectionMatrix(),"projection");
-        _wireFrameShader->setFloat(_size.x,"xSize");
-        _wireFrameShader->setFloat(_size.y,"ySize");
+        _wireFrameShader->setMat4(model, "model");
+        _wireFrameShader->setMat4(_camera->getViewMatrix(), "view");
+        _wireFrameShader->setMat4(_camera->getProjectionMatrix(), "projection");
+        _wireFrameShader->setFloat(_size.x, "xSize");
+        _wireFrameShader->setFloat(_size.y, "ySize");
         glBindVertexArray(_WireVAO);
         glDrawArrays(GL_LINES, 0, _wireVertices.size());
     }
+    glDepthFunc(GL_LESS);
     glBindVertexArray(0);
 }

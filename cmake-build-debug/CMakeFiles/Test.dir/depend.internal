@@ -89,6 +89,12 @@ CMakeFiles/Test.dir/Object/Scene/SkyBox.cpp.obj
  D:/learn/computer-graphic/StarAnim/Transform.h
 CMakeFiles/Test.dir/RenderManager.cpp.obj
  D:/learn/computer-graphic/StarAnim/Camera/Camera.h
+ D:/learn/computer-graphic/StarAnim/Light/DirLight.h
+ D:/learn/computer-graphic/StarAnim/Light/Light.h
+ D:/learn/computer-graphic/StarAnim/Light/Light_include.h
+ D:/learn/computer-graphic/StarAnim/Light/PointLight.h
+ D:/learn/computer-graphic/StarAnim/Light/SpotLight.h
+ D:/learn/computer-graphic/StarAnim/LightManager.h
  D:/learn/computer-graphic/StarAnim/Loader/ShaderLoader.h
  D:/learn/computer-graphic/StarAnim/Loader/TextureLoader.h
  D:/learn/computer-graphic/StarAnim/Object/BaseObject.h

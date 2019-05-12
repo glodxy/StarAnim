@@ -35,8 +35,8 @@ Model *obj,*obj1;
 SkyBox *skybox;
 Flat *flat;
 //static ShaderInfo si{
-//        "vertex",
-//        "test_fragment"
+//        "default.vert",
+//        "default.frag"
 //};
 
 
@@ -98,9 +98,10 @@ void initShader(){
     shaderManager=ShaderManager::getShaderManager();
     shaderManager->init();
     renderManager=RenderManager::getRenderManager();
+    renderManager->init();
 
     shader=shaderManager->getShader("default");
-//    shader=new Shader("Vertex","test_fragment");
+//    shader=new Shader("Vertex","default.frag");
     shader->setBool(true,"blinn");
     camera=Camera(glm::vec3(0.0f,0.0f,3.0f));
 
@@ -111,7 +112,6 @@ void initShader(){
     flat=new Flat("d:/learn/computer-graphic/StarAnim");
     flat->BindCamera(&camera);
     flat->setLineStrip(true);
-    flat->BindShader(shader);
     renderManager->addScene("floor",flat);
 
     //obj=new Model("E:/project/Test/inory/inory.pmx");
@@ -120,16 +120,14 @@ void initShader(){
     obj=new Model("e:/project/Test/Tda China Dress Stardust Canary/Tda China Dress Stardust Canary.pmx");
     obj->setPosition(0.0f,0.0f,0.0f);
     obj->scaleTo(0.2f,0.2f,0.2f);
-    obj->BindShader(shader);
     renderManager->addModel("stardust",obj);
-//    obj1->setPosition(10.0f,5.0f,0.0f);
-//    obj1->scaleTo(0.1f,0.1f,0.1f);
-    InitLight();
-    light=new PointLight(1.0,0.045,0.0075);
-    light->setPosition(lightPos);
-    light->setAmbient(Vec3(1.0f,1.0f,1.0f));
-    light->setDiffuse(Vec3(1.0f,1.0f,1.0f));
-    light->setSpecular(lightColor);
+
+//    InitLight();
+//    light=new PointLight(1.0,0.045,0.0075);
+//    light->setPosition(lightPos);
+//    light->setAmbient(Vec3(1.0f,1.0f,1.0f));
+//    light->setDiffuse(Vec3(1.0f,1.0f,1.0f));
+//    light->setSpecular(lightColor);
 
 
 //    spotLight=new SpotLight(glm::cos(glm::radians(12.5f)),glm::cos(glm::radians(15.0f)),camera.front(),1.0f,0.09f,0.032f,camera.position());
@@ -142,37 +140,20 @@ void initShader(){
     //lightManager->addLight(SPOT_LIGHT,spotLight);
     //lightManager->addLight(POINT_LIGHT,light);
     lightManager->addLight(DIR_LIGHT,dirLight);
-    lightManager->bindShader(shader);
     glEnable(GL_DEPTH_TEST);
-    glEnable(GL_MULTISAMPLE);
     glEnable(GL_BLEND);
     glBlendFunc(GL_SRC_ALPHA, GL_ONE_MINUS_SRC_ALPHA);
 }
 
 void display(){
     double time=glfwGetTime();
-//    spotLight->setDirection(camera.front());
-//    spotLight->setPosition(camera.position());
-    //
     shader->Use();
     shader->setMat4(camera.getProjectionMatrix(),"projection");
     shader->setMat4(camera.getViewMatrix(),"view");
     shader->setVec3(camera.position(),"viewPos");
-    lightManager->use();
-
-    //scene0->draw(*shader);
-    //scene1->draw(*shader);
-    //scene2->draw(*shader);
-
+    lightManager->use(shader);
 
     renderManager->draw();
-
-//    shader->setMat4(obj1->getModelMatrix(),"model");
-//    obj1->draw(*shader);
-
-//    DrawLight(&camera);
-//    lightPos=Vec3(5*glm::cos(time),3,5*glm::sin(time));
-//    light->setPosition(lightPos);
 
 }
 
@@ -217,15 +198,19 @@ int main() {
     glfwSetMouseButtonCallback(window,mouseButtonCall);
     glfwSetCursorPosCallback(window,mouseMoveCall);
     glfwSetScrollCallback(window,scrollCall);
-
+    glClearColor(0.1f,0.1f,0.1f,1.0f);
     while(!glfwWindowShouldClose(window)){
         //事件检查
         glfwPollEvents();
         do_move();
-        glClearColor(0.0f,0.0f,0.0f,1.0f);
+        renderManager->drawShadow();
+        glViewport(0,0,width,height);
         glClear(GL_COLOR_BUFFER_BIT|GL_DEPTH_BUFFER_BIT);
 
+        //renderManager->debugShadow();
         display();
+
+        renderManager->debugNormal(&camera);
         //交换缓冲区
         glfwSwapBuffers(window);
         GLfloat currentTime=glfwGetTime();

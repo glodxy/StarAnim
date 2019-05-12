@@ -12,15 +12,18 @@ public:
     static LightManager* getLightManager();
     ~LightManager();
 
-    void bindShader(Shader*s);
     void addLight(LightType type,Light* light);
 
-    void use()const;
+    DirLight* getDirLight();
+
+    Mat4 getLightSpaceMatrix()const;
+
+    void use(Shader* shader)const;
 private:
     LightManager();
     LightManager(const LightManager& lm);
-    Shader* _shader;
     static LightManager* _lightManager;
+    DirLight *_dirLight;
     Vector<Light*> *_lightList;
     int _pointLightCount,_spotLightCount;
 };

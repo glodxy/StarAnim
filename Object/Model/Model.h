@@ -18,6 +18,7 @@ public:
     virtual void draw(Shader*shader=NULL)const;
     virtual void drawShadow(Shader*shadow)const;
 
+    virtual void drawNormal(Shader* shader)const;
 
     void move(float x,float y,float z);
     void setPosition(float x,float y,float z);

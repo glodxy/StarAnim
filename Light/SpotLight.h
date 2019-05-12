@@ -14,7 +14,7 @@ public:
             const Vec3& ambient=Vec3(1.0f,1.0f,1.0f),const Vec3& diffuse=Vec3(1.0f,1.0f,1.0f),const Vec3& specular=Vec3(1.0f,1.0f,1.0f));
     virtual ~SpotLight(){}
 
-    virtual void use();
+    virtual void use(Shader* shader);
     void setPosition(const Vec3& position);
     void setDirection(const Vec3& direction);
     void setInnerCutOff(float ic);

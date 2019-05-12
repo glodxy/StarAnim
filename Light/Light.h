@@ -27,12 +27,9 @@ public:
     void setSpecular(const Vec3& specular);
 
     void setName(const String& name);
-    void bindShader(Shader* shader);
-    void unBindShader();
-    virtual void use()=0;
+    virtual void use(Shader*shader)=0;
 protected:
     LightType _type;
-    Shader *_shader;
     String _name;
     Vec3 _ambient;
     Vec3 _diffuse,_specular;
